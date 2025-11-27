@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { createRoot } from 'react-dom/client';
-import { ArrowUpRight, Github, Linkedin, Mail, Smartphone, Globe, Code, Layers, Zap, Database, Download, Camera, Upload, Phone, GraduationCap, Award, University, Box, Cpu, Cloud, CheckCircle, ChevronDown, ChevronUp, Briefcase, Building2, Bot, ListTodo, Target, Rocket, PenTool, Lightbulb, TrendingUp, AlertTriangle, KanbanSquare, Compass, MousePointer2, Timer, TestTube, Lock, AlertOctagon, Terminal } from 'lucide-react';
+import { Github, Linkedin, Mail, Globe, Code, Layers, Zap, Download, Phone, GraduationCap, Award, CheckCircle, ChevronDown, ChevronUp, Building2, Bot, KanbanSquare, Compass, Rocket, PenTool, Lightbulb, TrendingUp, AlertTriangle, MousePointer2, Lock, AlertOctagon, Terminal, TestTube, Cpu, University } from 'lucide-react';
 
 // --- CONFIGURATION ---
 
-// PERMANENT LINKS (Accessible to all visitors)
+// PERMANENT LINKS (Hosted on GitHub for reliability across Vercel deployments)
 const PROFILE_PIC_URL: string = "https://raw.githubusercontent.com/ismaelnfilho/ismaelfilho.com/main/profile.jpeg"; 
-const CV_FOLDER_URL: string = "/assets/CV_Ismael_Filho.pdf";
+const CV_FOLDER_URL: string = "https://raw.githubusercontent.com/ismaelnfilho/ismaelfilho.com/main/CV%20Ismael%20N%20FILHO%202025%20V3%20FR.pdf";
 const BRANDFETCH_API_KEY: string = "1idqPbOlRjmPHYGorpN";
 
 // --- Types & Data ---
@@ -670,7 +670,7 @@ const DATA: Record<Language, Content> = {
           solution: "L'intervention a impliqué de structurer tout le fonctionnement de l'écosystème, en menant des entretiens, en définissant le périmètre et en installant un cadre agile complet avec workflows et règles de criticité. Des parcours complexes, story mapping et roadmap ont été modélisés, ainsi que la création de toutes les règles d'interaction tactile et sonore. Le backlog a été rédigé intégralement en BDD/Gherkin pour garantir la précision technique. La documentation a été adaptée pour les lecteurs d'écran. Avec le départ du designer, j'ai assumé la conception des interfaces — assurant continuité et validation auprès de l'équipe technique et des chercheurs.",
           impact: [
              "Écosystème fonctionnel complet : spécifications détaillées pour éditeur desktop e app mobile.",
-             "Cadre agile implémenté : workflows, DoR, story mapping et roadmap opérationnel.",
+             "Cadre agile implémenté : workflows, DoR, story mapping et roadmap operacional.",
              "Backlog structuré en BDD, éliminant l'ambiguïté et réduisant le retravail.",
              "Interfaces conçues et livrées sans designer, maintenant la cohérence visuelle et fonctionnelle.",
              "Sprints plus prévisibles, avec un alignement fort entre UX, accessibilité et développement.",
@@ -683,13 +683,13 @@ const DATA: Record<Language, Content> = {
           client: "LHH",
           role: "Proxy PO (2021-2022)",
           type: "Plateforme SaaS B2B",
-          summary: "Portail intégré pour employés, consultants et superviseurs, créé pour structurer et centraliser tout le processus de transition professionnelle après des licenciements économiques. Le projet exigeait une clarté fonctionnelle, une modélisation de parcours complexes et une organisation agile capable de donner vie à des interactions critiques entre multiples profils.",
+          summary: "Portail intégré pour employés, consultants et superviseurs, créé pour structurer et centraliser tout le processus de transition professionnelle après des licenciements économiques. Le projet exigeait une clareza fonctionnelle, une modélisation de parcours complexes et une organisation agile capable de donner vie à des interactions critiques entre múltiplos profils.",
           challenge: "LHH devait moderniser la gestion des processus de licenciement économique, traditionnellement menés par téléphone, e-mails et visites. Il manquait une plateforme unique permettant aux employés d'accéder aux infos, d'envoyer des documents ou de contacter des consultants. Le défi incluait de multiples profils, une littératie numérique limitée et une forte pression pour la clarté et la prévisibilité.",
           solution: "L'intervention a impliqué l'analyse profonde du processus existant et la structuration des trois flux principaux (employé, consultant, superviseur). Des entretiens, cartographie de parcours, story mapping et définition de requis fonctionnels ont été menés. Le cadre agile a été installé de zéro. Avec le départ inattendu du designer, tout le design fonctionnel et les ateliers de conception ont été assumés directement, permettant d'aligner vision technique, règles métier et UX. Le travail a aussi inclus l'évangélisation des parties prenantes avec des formations spécifiques.",
           impact: [
              "Modèle fonctionnel complet pour trois profils (employé, consultant, superviseur).",
              "Backlog clair et priorisé, permettant prévisibilité et développement continu.",
-             "Interface redesignée après départ du designer, assurant la continuité sans perte de rythme.",
+             "Interface redesenhada após saída do designer, assurant la continuité sans perte de rythme.",
              "Story mapping et parcours structurés, permettant des décisions plus rapides et assertives.",
              "Parties prenantes alignées, grâce à la formation et à la pédagogie appliquée.",
              "Projet stabilisé, évitant le risque d'annulation et assurant une livraison constante."
@@ -816,7 +816,7 @@ const DATA: Record<Language, Content> = {
         {
           name: "IA & Automatisation",
           icon: Zap,
-          items: ["Intégration LLM", "Prompt Engineering", "Embeddings & Vector DB", "Workflows n8n", "Orchestration IA Agentique", "APIs OpenAI / Gemini", "Automatisation No-code / Low-code", "Fonctions Supabase & Webhooks"]
+          items: ["Intégration LLM", "Prompt Engineering", "Embeddings & Vector DB", "Workflows n8n", "Orquestration IA Agentique", "APIs OpenAI / Gemini", "Automatisation No-code / Low-code", "Fonctions Supabase & Webhooks"]
         },
         {
           name: "Fondamentaux Produit",
@@ -959,7 +959,7 @@ const DATA: Record<Language, Content> = {
             "Pilotage de múltiplos projetos paralelos, do discovery ao delivery, para aplicações web, desktop (Windows/macOS) e mobile (iOS/Android).",
             "Coordenação transversal de equipes DEV/QA/UX, sincronização de trabalhos e gestão de dependências para garantir entregas.",
             "Workshops de co-criação, benchmarks e story mapping para enquadrar valor e alinhar stakeholders.",
-            "Concepção e validação de protótipos: wireframes/maquetes, testes de usuário focados e itérations rápidas.",
+            "Concepção e validação de protótipos: wireframes/maquettes, testes de usuário focados e itérations rápidas.",
             "Levantamento, formalização e desafio de requisitos; redação de especificações funcionais e user stories em BDD.",
             "Framework ágil implementado: priorização de backlog por valor, sprints (planning, reviews, retros) e demonstrações regulares."
           ],
@@ -986,7 +986,7 @@ const DATA: Record<Language, Content> = {
           description: [
             "Manutenção evolutiva e entrega de novas funcionalidades conforme roadmap do produto, garantindo continuidade de serviço.",
             "Workshops de co-criação e benchmark competitivo para identificar oportunidades UX e priorizar melhorias de alto valor.",
-            "Concepção e validação de protótipos: wireframes/maquetes testados com stakeholders antes do desenvolvimento.",
+            "Concepção e validação de protótipos: wireframes/maquettes testados com stakeholders antes do desenvolvimento.",
             "Gestão de backlog: redação de Epics e User Stories, priorização e coordenação diária com equipes técnicas (França/Offshore).",
             "Garantia de qualidade: preparação e execução de testes de não-regressão e acompanhamento de correções até produção.",
             "Documentação e comunicação: especificações funcionais, relatórios de sprint e demonstrações regulares."
