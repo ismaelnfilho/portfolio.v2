@@ -1,7 +1,7 @@
 {
   "type": "module",
   "scripts": {
-    "build": "mkdir -p dist && cp -r . dist/",
+    "build": "rm -rf dist && mkdir dist && cp index.html dist/ && cp -r api dist/ && cp robots.txt dist/ && cp sitemap.xml dist/",
     "start": "node server.js"
   }
 }
