@@ -1,7 +1,7 @@
 {
   "type": "module",
   "scripts": {
-    "build": "vite build",
+    "build": "mkdir -p dist && cp -r . dist/"
     "start": "node server.js"
   }
 }
