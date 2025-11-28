@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { createRoot } from 'react-dom/client';
-import { Linkedin, Mail, Globe, Code, Layers, Zap, Download, Phone, GraduationCap, Award, CheckCircle, ChevronDown, ChevronUp, Building2, Bot, KanbanSquare, Compass, Rocket, PenTool, Lightbulb, TrendingUp, AlertTriangle, MousePointer2, Lock, AlertOctagon, Terminal, TestTube, Cpu, University } from 'lucide-react';
+import { Linkedin, Mail, Globe, Code, Layers, Zap, Download, Phone, GraduationCap, Award, CheckCircle, ChevronDown, ChevronUp, Building2, Bot, KanbanSquare, Compass, Rocket, PenTool, Lightbulb, TrendingUp, AlertTriangle, MousePointer2, Lock, AlertOctagon, Terminal, TestTube, Cpu, School, University } from 'lucide-react';
 
 // --- CONFIGURATION ---
 
@@ -626,7 +626,7 @@ const DATA: Record<Language, Content> = {
             "Maintenance évolutive et livraison de nouvelles fonctionnalités conformément à la roadmap produit, avec continuité de service assurée.",
             "Ateliers de co‑création et benchmark concurrentiel pour identifier des opportunités UX et prioriser les améliorations à plus forte valeur.",
             "Conception et validation de prototypes: wireframes/maquettes testés auprès des stakeholders avant développement.",
-            "Gestion du backlog: rédaction d’Epics et User Stories, priorisation et coordination quotidienne avec des équipes techniques (France/Offshore).",
+            "Gestion du backlog: rédaction d’Epics et User Stories, priorisation et coordination quotidienne avec des équipes techniques (França/Offshore).",
             "Garantie qualité: préparation et exécution de tests de non‑régression et suivi des corrections jusqu’à la mise en production.",
             "Documentation et communication: spécifications fonctionnelles, comptes‑rendus de sprint et démonstrations régulières."
           ],
@@ -702,7 +702,7 @@ const DATA: Record<Language, Content> = {
           role: "Product Owner (2018-2019)",
           type: "App Mobile & Web B2C",
           summary: "Évolution continue de l'application et du site de cashback de Catalina, avec un focus sur l'amélioration de l'engagement, de l'utilisabilité et de la performance des campagnes. Inclut la création d'un module de tirages au sort qui a transformé la participation des utilisateurs et élevé l'efficacité des activations.",
-          challenge: "L'application Coupon Network avait une grande base d'utilisateurs, mais les actions promotionnelles avaient une faible visibilité et les tirages au sort étaient menés de façon déconnectée : les utilisateurs étaient sélectionnés sans savoir qu'ils participaient. Cela générait un gaspillage d'opportunité et des réclamations. Le défi était de créer une expérience claire, visuelle, motivante et opérationnellement efficace.",
+          challenge: "L'application Coupon Network avait une grande base d'utilisateurs, mais les actions promotionnelles avaient une faible visibilité et les tirages au sort étaient menés de façon déconnectée : les utilisateurs étaient sélectionnés sans savoir qu'ils participaient. Cela générait un gaspillage d'opportunité et des réclamations. Le défi était de créer une expérience claire, visuale, motivante et opérationnellement efficace.",
           solution: "L'action a commencé par un diagnostic, analyse de données et entretiens. Des ateliers d'idéation et une session de co-construction de wireframes en direct ont été menés — une approche efficace pour aligner marketing, parties prenantes et tech. Le module a été conçu de bout en bout : hypothèses, benchmark, prototype, définitions fonctionnelles, critères d'éligibilité, logique de tickets et flux de participation. Le développement a été suivi jusqu'à la livraison et l'analyse d'impact.",
           impact: [
              "Nouveau module de tirages intégré à l'app et au site, avec participation explicite.",
