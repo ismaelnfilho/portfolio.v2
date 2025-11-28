@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { createRoot } from 'react-dom/client';
-import { Linkedin, Mail, Globe, Code, Layers, Zap, Download, Phone, GraduationCap, Award, CheckCircle, ChevronDown, ChevronUp, Building2, Bot, KanbanSquare, Compass, Rocket, PenTool, Lightbulb, TrendingUp, AlertTriangle, MousePointer2, Lock, AlertOctagon, Terminal, TestTube, Cpu, School, GraduationCap } from 'lucide-react';
+import { Linkedin, Mail, Globe, Code, Layers, Zap, Download, Phone, GraduationCap, Award, CheckCircle, ChevronDown, ChevronUp, Building2, Bot, KanbanSquare, Compass, Rocket, PenTool, Lightbulb, TrendingUp, AlertTriangle, MousePointer2, Lock, AlertOctagon, Terminal, TestTube, Cpu, School, University } from 'lucide-react';
 
 // --- CONFIGURATION ---
 
@@ -684,7 +684,7 @@ const DATA: Record<Language, Content> = {
           role: "Proxy PO (2021-2022)",
           type: "Plateforme SaaS B2B",
           summary: "Portail intégré pour employés, consultants et superviseurs, créé pour structurer et centraliser tout le processus de transition professionnelle après des licenciements économiques. Le projet exigeait une clareza fonctionnelle, une modélisation de parcours complexes et une organisation agile capable de donner vie à des interactions critiques entre múltiplos profils.",
-          challenge: "LHH devait moderniser la gestion des processus de licenciement économique, traditionnellement menés par téléphone, e-mails et visites. Il manquait une plateforme unique permettant aux employés d'accéder aux infos, d'envoyer des documents ou de contacter des consultants. Le défi incluait de multiples profils, une littératie numérique limitée et une forte pression pour la clarté et la prévisibilité.",
+          challenge: "LHH devait moderniser la gestion des processus de licenciement économique, traditionnellement menés par téléphone, e-mails et visites. Il manquait une plateforme unique permettant aux employés d'accéder aux infos, d'envoyer des documents ou de contacter des consultants. Le défi incluait de multiples profils, une littératie numérique limitée et une forte pression pour la clareza et la prévisibilité.",
           solution: "L'intervention a impliqué l'analyse profonde du processus existant et la structuration des trois flux principaux (employé, consultant, superviseur). Des entretiens, cartographie de parcours, story mapping et définition de requis fonctionnels ont été menés. Le cadre agile a été installé de zéro. Avec le départ inattendu du designer, tout le design fonctionnel et les ateliers de conception ont été assumés directement, permettant d'aligner vision technique, règles métier et UX. Le travail a aussi inclus l'évangélisation des parties prenantes avec des formations spécifiques.",
           impact: [
              "Modèle fonctionnel complet pour trois profils (employé, consultant, superviseur).",
@@ -958,7 +958,7 @@ const DATA: Record<Language, Content> = {
           description: [
             "Pilotage de múltiplos projetos paralelos, do discovery ao delivery, para aplicações web, desktop (Windows/macOS) e mobile (iOS/Android).",
             "Coordenação transversal de equipes DEV/QA/UX, sincronização de trabalhos e gestão de dependências para garantir entregas.",
-            "Workshops de co-criação e benchmark competitivos para enquadrar valor e alinhar stakeholders.",
+            "Workshops de co-criação e benchmark competitivo para enquadrar valor e alinhar stakeholders.",
             "Concepção e validação de protótipos: wireframes/maquettes, testes de usuário focados e itérations rápidas.",
             "Levantamento, formalização e desafio de requisitos; redação de especificações funcionais e user stories em BDD.",
             "Framework ágil implementado: priorização de backlog por valor, sprints (planning, reviews, retros) e demonstrações regulares."
