@@ -958,7 +958,7 @@ const DATA: Record<Language, Content> = {
           description: [
             "Pilotage de múltiplos projetos paralelos, do discovery ao delivery, para aplicações web, desktop (Windows/macOS) e mobile (iOS/Android).",
             "Coordenação transversal de equipes DEV/QA/UX, sincronização de trabalhos e gestão de dependências para garantir entregas.",
-            "Workshops de co-criação, benchmarks e story mapping para enquadrar valor e alinhar stakeholders.",
+            "Workshops de co-criação e benchmark competitivos para enquadrar valor e alinhar stakeholders.",
             "Concepção e validação de protótipos: wireframes/maquettes, testes de usuário focados e itérations rápidas.",
             "Levantamento, formalização e desafio de requisitos; redação de especificações funcionais e user stories em BDD.",
             "Framework ágil implementado: priorização de backlog por valor, sprints (planning, reviews, retros) e demonstrações regulares."
@@ -973,7 +973,7 @@ const DATA: Record<Language, Content> = {
           description: [
             "Gerente de Aplicações: Pilotagem de RUN multi-contas com priorização e acompanhamento orçamentário para garantir continuidade de serviço.",
             "Planejamento de lotes e coordenação diária com equipes técnicas/design para garantir releases em produção.",
-            "Proxy PO: Intervenções de pré-venda, enquadramento de produto e estruturação de backlogs iniciais.",
+            "Proxy PO: Interventions de pré-venda, enquadramento de produto e estruturação de backlogs iniciais.",
             "Condução de story mapping, wireframing e pesquisa UX (entrevistas, insights) para alinhar produto-usuário."
           ],
           tech: ["Consultoria", "Pesquisa UX", "Pré-venda"]
