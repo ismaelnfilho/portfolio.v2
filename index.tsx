@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { createRoot } from 'react-dom/client';
-import { Linkedin, Mail, Globe, Code, Layers, Zap, Download, Phone, GraduationCap, Award, CheckCircle, ChevronDown, ChevronUp, Building2, Bot, KanbanSquare, Compass, Rocket, PenTool, Lightbulb, TrendingUp, AlertTriangle, MousePointer2, Lock, AlertOctagon, Terminal, TestTube, Cpu, School } from 'lucide-react';
+import { Linkedin, Mail, Globe, Code, Layers, Zap, Download, Phone, GraduationCap, Award, CheckCircle, ChevronDown, ChevronUp, Building2, Bot, KanbanSquare, Compass, Rocket, PenTool, Lightbulb, TrendingUp, AlertTriangle, MousePointer2, Lock, AlertOctagon, Terminal, TestTube, Cpu, School, GraduationCap } from 'lucide-react';
 
 // --- CONFIGURATION ---
 
