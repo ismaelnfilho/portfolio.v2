@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { createRoot } from 'react-dom/client';
-import { Linkedin, Mail, Globe, Code, Layers, Zap, Download, Phone, GraduationCap, Award, CheckCircle, ChevronDown, ChevronUp, Building2, Bot, KanbanSquare, Compass, Rocket, PenTool, Lightbulb, TrendingUp, AlertTriangle, MousePointer2, Lock, AlertOctagon, Terminal, TestTube, Cpu, School, University } from 'lucide-react';
+import { Linkedin, Mail, Globe, Code, Layers, Zap, Download, Phone, GraduationCap, Award, CheckCircle, ChevronDown, ChevronUp, Building2, Bot, KanbanSquare, Compass, Rocket, PenTool, Lightbulb, TrendingUp, AlertTriangle, MousePointer2, Lock, AlertOctagon, Terminal, TestTube, Cpu, School } from 'lucide-react';
 
 // --- CONFIGURATION ---
 
@@ -28,7 +28,6 @@ interface Content {
     role: string;
     subrole: string;
     description: string;
-    availability: string;
     cta_contact: string;
     cta_cv: string;
     trilingual: string;
@@ -136,7 +135,6 @@ const DATA: Record<Language, Content> = {
       role: "DIGITAL PRODUCT SPECIALIST",
       subrole: "AI, AUTOMATION & NO-CODE ENTHUSIAST",
       description: "Building digital products where usability, structure and intelligence converge. I combine user-centric thinking, functional design and AI-powered automation to create experiences that work — beautifully and efficiently.",
-      availability: "Available for new opportunities",
       cta_contact: "Start a conversation",
       cta_cv: "Download CV",
       trilingual: "TRILINGUAL"
@@ -497,7 +495,6 @@ const DATA: Record<Language, Content> = {
       role: "SPÉCIALISTE PRODUIT DIGITAL",
       subrole: "ENTHOUSIASTE IA, AUTOMATION & NO-CODE",
       description: "Concevoir des produits digitaux où convergent utilisabilité, structure et intelligence. J'allie pensée centrée utilisateur, design fonctionnel et automatisation IA pour créer des expériences performantes — à la fois belles et efficaces.",
-      availability: "Disponible pour de nouvelles opportunités",
       cta_contact: "Me contacter",
       cta_cv: "Télécharger CV",
       trilingual: "TRILINGUE"
@@ -666,7 +663,7 @@ const DATA: Record<Language, Content> = {
           role: "Product Owner (2022-2024)",
           type: "R&D / Accessibilité",
           summary: "Solution complète pour la création et la consommation de contenus éducatifs tactiles et sonores, composée d'un éditeur desktop et d'une app mobile orientée vers les étudiants aveugles. Le projet exigeait une structure fonctionnelle robuste, des règles d'interaction avancées et une stratégie agile capable d'organiser un écosystème entièrement nouveau.",
-          challenge: "Les chercheurs de l'Université Paul Sabatier cherchaient à moderniser l'accès à l'apprentissage pour les personnes déficientes visuelles. La limitation du matériel braille, la rareté des exemplaires et le manque de ressources numériques accessibles créaient des barrières profondes. Il était nécessaire de concevoir deux applications interconnectées — l'une pour la création d'interactions multimodales (tactile, relief, gesture et audio) et l'autre pour permettre leur exploration par les étudiants — tout en maintenant cohérence, accessibilité et rigueur fonctionnelle.",
+          challenge: "Les chercheurs de l'Université Paul Sabatier cherchaient à moderniser l'accès à l'apprentissage pour les personnes déficientes visuelles. La limitation du matériel braille, la rareté des exemplaires et le manque de ressources numériques accessibles créaient des barrières profondes. Il était nécessaire de concevoir deux applications interconnectées — l'une pour la création d'interactions multimodais (tactile, relief, gesture et audio) et l'autre pour permettre leur exploration par les étudiants — tout en maintenant cohérence, accessibilité et rigueur fonctionnelle.",
           solution: "L'intervention a impliqué de structurer tout le fonctionnement de l'écosystème, en menant des entretiens, en définissant le périmètre et en installant un cadre agile complet avec workflows et règles de criticité. Des parcours complexes, story mapping et roadmap ont été modélisés, ainsi que la création de toutes les règles d'interaction tactile et sonore. Le backlog a été rédigé intégralement en BDD/Gherkin pour garantir la précision technique. La documentation a été adaptée pour les lecteurs d'écran. Avec le départ du designer, j'ai assumé la conception des interfaces — assurant continuité et validation auprès de l'équipe technique et des chercheurs.",
           impact: [
              "Écosystème fonctionnel complet : spécifications détaillées pour éditeur desktop e app mobile.",
@@ -858,7 +855,6 @@ const DATA: Record<Language, Content> = {
       role: "ESPECIALISTA EM PRODUTO DIGITAL",
       subrole: "ENTUSIASTA IA, AUTOMAÇÃO & NO-CODE",
       description: "Construindo produtos digitais onde usabilidade, estrutura e inteligência convergem. Combino pensamento centrado no usuário, design funcional e automação via IA para criar experiências que funcionam — com beleza e eficiência.",
-      availability: "Disponível para novas oportunidades",
       cta_contact: "Entrar em contato",
       cta_cv: "Baixar CV",
       trilingual: "TRILÍNGUE"
@@ -1018,7 +1014,7 @@ const DATA: Record<Language, Content> = {
       labels: {
         challenge: "Contexto / Desafio",
         solution: "Solução / Intervenção",
-        impact: "Impacto"
+        impact: "Impact"
       },
       items: [
         {
@@ -1562,7 +1558,7 @@ const InstitutionBadge: React.FC<{ name: string, type?: string, domain?: string 
   if (name.includes("La Française")) initials = "FDJ";
 
   // Icon fallback logic
-  const Icon = type === 'cert' ? Award : University;
+  const Icon = type === 'cert' ? Award : School;
   
   return (
     <div className="w-16 h-16 shrink-0 border border-gray-700 bg-white flex items-center justify-center relative group-hover:border-cyber-lime transition-colors duration-300 cyber-glitch-box overflow-hidden rounded-sm">
@@ -1888,11 +1884,7 @@ const App = () => {
       <section className="relative z-10 min-h-screen flex flex-col lg:flex-row items-center justify-center px-6 md:px-12 lg:px-12 xl:px-24 pt-32 lg:pt-0 gap-12 lg:gap-20 group hover-trigger">
     
         <div className="flex-1 order-2 lg:order-1 flex flex-col items-center lg:items-start text-center lg:text-left">
-            <div className="font-mono text-cyber-lime mb-6 flex items-center gap-2 text-sm md:text-base bg-cyber-lime/10 px-3 py-1 rounded-full w-fit cyber-glitch-box">
-              <span className="w-2 h-2 bg-cyber-lime rounded-full animate-pulse"></span>
-              {t.hero.availability}
-            </div>
-
+            
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-none mb-6 text-white tracking-tight flex flex-col items-center lg:items-start">
               <GlitchText text="ISMAEL" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-400">
@@ -2098,10 +2090,10 @@ const App = () => {
                 </div>
              </div>
           </div>
-         </div>
+        </div>
       </section>
 
-      {/* --- SKILLS --- */}
+      {/* --- SKILLS SECTION --- */}
       <section id="skills" className="relative z-10 px-6 md:px-12 lg:px-12 xl:px-24 py-24 border-t border-white/5 bg-cyber-dark/30 group hover-trigger">
         <div className="grid md:grid-cols-5 gap-12">
           <div className="md:col-span-1 font-mono text-gray-400 text-sm sticky top-24 h-fit">
@@ -2109,63 +2101,88 @@ const App = () => {
           </div>
           <div className="md:col-span-3">
             <SectionHeading>{t.skills.title}</SectionHeading>
-            <div className="grid sm:grid-cols-2 gap-8">
-              {t.skills.categories.map((cat, idx) => (
-                <div key={idx} className={`border-t border-gray-800 pt-6 group/cat`}>
-                  <div className="flex items-center gap-3 mb-4 text-cyber-lime">
-                    <cat.icon size={20} className="cyber-glitch-box" />
-                    <h3 className="font-bold text-lg text-white">
-                        <GlitchText text={cat.name} />
-                    </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-12">
+              {t.skills.categories.map((category, idx) => {
+                const Icon = category.icon;
+                return (
+                  <div key={idx} className={`cyber-glitch-box p-6 bg-white/5 border border-white/5 rounded-sm`}>
+                    <div className="flex items-center gap-3 mb-6 text-cyber-lime">
+                      <Icon size={24} />
+                      <h3 className="font-bold uppercase tracking-wider">{category.name}</h3>
+                    </div>
+                    <ul className="space-y-3">
+                      {category.items.map((item, i) => (
+                        <li key={i} className="text-gray-300 font-mono text-sm flex items-center gap-2">
+                           <div className="w-1 h-1 bg-cyber-lime rounded-full"></div>
+                           {item}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                  <ul className={`space-y-2`}>
-                    {cat.items.map(skill => (
-                      <li key={skill} className="text-gray-300 hover:text-white transition-colors cursor-default">
-                        {skill}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </div>
       </section>
 
-      {/* --- CONTACT --- */}
-      <section id="contact" className="relative z-10 px-6 md:px-12 lg:px-12 xl:px-24 py-32 border-t border-white/5 group hover-trigger">
-        <div className="max-w-4xl mx-auto text-center">
-          <SectionHeading>{t.contact.title}</SectionHeading>
-          <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
-            {t.contact.text}
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <a href="mailto:ismaelnfilho@gmail.com" className="px-8 py-4 bg-transparent border border-cyber-lime text-cyber-lime font-mono text-lg hover:bg-cyber-lime hover:text-black transition-all duration-300 flex items-center gap-3 cyber-glitch-box">
-              <Mail size={20} />
-              {t.contact.cta_email}
-            </a>
-            <a href="https://linkedin.com/in/ismaelnfilho/" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-gray-900 border border-gray-800 text-white font-mono text-lg hover:border-gray-600 transition-all duration-300 flex items-center gap-3 cyber-glitch-box">
-              <Linkedin size={20} />
-              {t.contact.cta_linkedin}
-            </a>
-            <a href="tel:+33666324997" className="px-8 py-4 bg-transparent border border-gray-700 text-gray-300 font-mono text-lg hover:border-cyber-lime hover:text-cyber-lime transition-all duration-300 flex items-center gap-3 cyber-glitch-box">
-              <Phone size={20} />
-              {t.contact.cta_phone}
-            </a>
+      {/* --- CONTACT SECTION --- */}
+      <section id="contact" className="relative z-10 px-6 md:px-12 lg:px-12 xl:px-24 py-24 border-t border-white/5 group hover-trigger">
+        <div className="grid md:grid-cols-5 gap-12">
+          <div className="md:col-span-1 font-mono text-gray-400 text-sm sticky top-24 h-fit">
+            <GlitchText text={t.nav.contact} />
           </div>
-          
-          <div className="mt-24 pt-8 border-t border-gray-900 flex flex-col md:flex-row justify-between items-center text-gray-500 font-mono text-xs">
-            <p>&copy; {new Date().getFullYear()} Ismael Nascimento Filho</p>
-            <div className="flex gap-4 mt-4 md:mt-0">
-              <span>Paris, France</span>
-              <span>06 66 32 49 97</span>
+          <div className="md:col-span-3">
+            <SectionHeading>{t.contact.title}</SectionHeading>
+            <p className="text-2xl text-white mb-12 max-w-2xl leading-relaxed">
+              {t.contact.text}
+            </p>
+            <div className="flex flex-wrap gap-6">
+              <a href="mailto:ismaelnfilho@gmail.com" className="flex items-center gap-3 px-8 py-4 bg-cyber-lime text-cyber-black font-bold uppercase tracking-wider hover:bg-white transition-all duration-300 cyber-glitch-box rounded-sm">
+                <Mail size={20} />
+                {t.contact.cta_email}
+              </a>
+              <a href="https://linkedin.com/in/ismaelnfilho/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 px-8 py-4 border border-gray-600 text-white font-bold uppercase tracking-wider hover:border-cyber-lime hover:text-cyber-lime transition-all duration-300 cyber-glitch-box rounded-sm">
+                <Linkedin size={20} />
+                {t.contact.cta_linkedin}
+              </a>
+               <a href="tel:+33666324997" className="flex items-center gap-3 px-8 py-4 border border-gray-600 text-white font-bold uppercase tracking-wider hover:border-cyber-lime hover:text-cyber-lime transition-all duration-300 cyber-glitch-box rounded-sm">
+                <Phone size={20} />
+                {t.contact.cta_phone}
+              </a>
             </div>
           </div>
         </div>
       </section>
+
+      {/* --- FOOTER --- */}
+      <footer className="relative z-10 border-t border-white/10 py-12 text-center">
+         <div className="flex flex-col items-center gap-4">
+            <div className="font-mono text-gray-500 text-xs tracking-widest uppercase">
+              Ismael Filho © {new Date().getFullYear()}
+            </div>
+            <div className="flex gap-4">
+               <a href="https://github.com/ismaelnfilho" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-cyber-lime transition-colors">
+                  <Code size={16} />
+               </a>
+               <a href="https://linkedin.com/in/ismaelnfilho/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-cyber-lime transition-colors">
+                  <Linkedin size={16} />
+               </a>
+               <a href="mailto:ismaelnfilho@gmail.com" className="text-gray-500 hover:text-cyber-lime transition-colors">
+                  <Mail size={16} />
+               </a>
+            </div>
+             <div className="font-mono text-gray-600 text-[10px] mt-4">
+              SYSTEM STATUS: ONLINE | V2.4.0
+            </div>
+         </div>
+      </footer>
     </div>
   );
 };
 
-const root = createRoot(document.getElementById('root')!);
-root.render(<App />);
+createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
