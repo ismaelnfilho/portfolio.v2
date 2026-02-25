@@ -1,13 +1,14 @@
+
 import React, { useState, useEffect, useRef } from 'react';
 import { createRoot } from 'react-dom/client';
 import { Linkedin, Mail, Globe, Code, Layers, Zap, Download, Phone, GraduationCap, Award, CheckCircle, ChevronDown, ChevronUp, Building2, Bot, KanbanSquare, Compass, Rocket, PenTool, Lightbulb, TrendingUp, AlertTriangle, MousePointer2, Lock, AlertOctagon, Terminal, TestTube, Cpu, School } from 'lucide-react';
 
 // --- CONFIGURATION ---
 
-// PERMANENT LINKS (Hosted on GitHub for reliability across Vercel deployments)
 const PROFILE_PIC_URL: string = "https://raw.githubusercontent.com/ismaelnfilho/ismaelfilho.com/main/profile.jpeg"; 
 const CV_FOLDER_URL: string = "https://raw.githubusercontent.com/ismaelnfilho/ismaelfilho.com/main/CV%20Ismael%20N%20FILHO%202025%20V3%20FR.pdf";
 const BRANDFETCH_API_KEY: string = "1idqPbOlRjmPHYGorpN";
+const PHONE_NUMBER: string = "+33 6 66 32 49 97"; // Updated with user's real number
 
 // --- Types & Data ---
 
@@ -90,15 +91,15 @@ interface Content {
       school: string;
       year: string;
       desc: string;
-      details: string[]; // Competencies acquired
+      details: string[];
       domain?: string;
     }[];
     certs: {
       name: string;
       issuer: string;
       year: string;
-      desc: string; // Added description for certs
-      details: string[]; // Competencies acquired
+      desc: string;
+      details: string[];
       domain?: string;
     }[];
   };
@@ -300,72 +301,72 @@ const DATA: Record<Language, Content> = {
         {
           name: "DERi",
           client: "Université Paul Sabatier",
-          role: "Product Owner (2022-2024)",
+          role: "Product Owner",
           type: "R&D / Accessibility",
-          summary: "A complete solution for creating and consuming tactile and auditory educational content, consisting of a desktop editor and a mobile app tailored for blind students. The project demanded a robust functional structure, advanced interaction rules, and an agile strategy to organize a brand-new ecosystem.",
-          challenge: "Researchers at Paul Sabatier University sought to modernize learning access for visually impaired people. The limitations of Braille, scarcity of materials, and lack of accessible digital resources created deep barriers. It was necessary to design two interconnected applications—one for creating multimodal interactions (tactile, relief, gesture, audio) and another for student exploration—while maintaining coherence, accessibility, and functional rigor.",
-          solution: "I structured the entire ecosystem's operation by conducting interviews, defining scope, and installing a full agile framework with workflows and criticality rules. We modeled complex journeys, story maps, and roadmaps, alongside creating all tactile and audio interaction rules. The backlog was written entirely in BDD/Gherkin to ensure technical precision. Documentation was adapted for screen readers to involve blind users. Following the designer's departure, I took over interface conception, ensuring continuity and validation with the tech team and researchers.",
+          summary: "Complete solution for the creation and consumption of tactile and auditory educational content, consisting of a desktop editor and a mobile app oriented towards blind students. The project required a robust functional structure, advanced interaction rules and an agile strategy capable of organizing a completely new ecosystem.",
+          challenge: "Researchers at Paul Sabatier University sought to modernize access to learning for visually impaired people. The limitation of Braille material, the scarcity of copies and the lack of accessible digital resources created deep barriers. It was necessary to design two interconnected applications — one for creating multimodal interactions (tactile, relief, gesture and audio) and another to allow their exploration by students — while maintaining consistency, accessibility and functional rigor.",
+          solution: "The intervention involved structuring the entire functioning of the ecosystem, conducting interviews, defining the scope and installing a complete agile framework with workflows and criticality rules. Complex paths, story mapping and roadmaps were modeled, as well as the creation of all tactile and sound interaction rules. The backlog was written entirely in BDD/Gherkin to guarantee technical precision. Documentation was adapted for screen readers. With the departure of the designer, I assumed the design of the interfaces — ensuring continuity and validation with the technical team and researchers.",
           impact: [
              "Complete functional ecosystem: detailed specs for desktop editor and mobile app.",
-             "Implemented Agile Framework: workflows, DoR, story mapping, and operational roadmap.",
-             "Structured Backlog in BDD, eliminating ambiguity and reducing rework.",
-             "Interfaces designed and delivered without a designer, maintaining visual and functional coherence.",
-             "Predictable sprints with strong alignment between UX, accessibility, and development.",
-             "Simplified collaboration process, inclusive of blind users and technical researchers."
+             "Agile framework implemented: workflows, DoR, story mapping and operational roadmap.",
+             "Backlog structured in BDD, eliminating ambiguity and reducing rework.",
+             "Interfaces designed and delivered without a dedicated designer, maintaining consistency.",
+             "Sprints more predictable, with strong alignment between UX, accessibility and development.",
+             "Simplified collaboration process, including for blind users and technical researchers."
           ],
-          tags: ["FunctionalDesign", "Accessibility", "ProductDiscovery", "UXThinking", "AgileFrameworks", "BacklogStrategy", "BDD", "Prototyping"]
+          tags: ["FunctionalDesign", "Accessibility", "ProductDiscovery", "UXThinking", "AgileFrameworks", "BDD", "Prototyping"]
         },
         {
           name: "CASP",
           client: "LHH",
-          role: "Proxy PO (2021-2022)",
+          role: "Proxy PO",
           type: "B2B SaaS Platform",
-          summary: "An integrated portal for employees, consultants, and supervisors, created to structure and centralize the career transition process following economic layoffs. The project required functional clarity, complex journey modeling, and an agile organization capable of enabling critical interactions between multiple profiles.",
-          challenge: "LHH needed to modernize the management of economic layoff processes, traditionally conducted via phone, email, and visits. There was no single platform for employees to access info, send documents, or contact consultants, while supervisors lacked tools to pilot cases. The challenge included multiple profiles, limited digital literacy, and strong pressure for clarity and predictability.",
-          solution: "I analyzed existing processes and structured three main flows (employee, consultant, supervisor). I conducted interviews, journey mapping, story mapping, and functional requirements definition. I installed an agile framework from scratch to ensure predictability. With the unexpected departure of the designer, I assumed all functional design and conception workshops, aligning technical vision, business rules, and UX. I also led stakeholder evangelization with specific training on project dynamics.",
+          summary: "Integrated portal for employees, consultants and supervisors, created to structure and centralize the entire professional transition process after economic layoffs. The project required functional clarity, modeling of complex journeys and an agile organization capable of giving life to critical interactions between multiple profiles.",
+          challenge: "LHH needed to modernize the management of economic layoff processes, traditionally conducted by telephone, emails and visits. A single platform was missing that allowed employees to access info, send documents or contact consultants. The challenge included multiple profiles, limited digital literacy and strong pressure for clarity and predictability.",
+          solution: "The intervention involved the deep analysis of the existing process and the structuring of the three main flows (employee, consultant, supervisor). Interviews, journey mapping, story mapping and definition of functional requirements were conducted. The agile framework was installed from zero. With the unexpected departure of the designer, all functional design and conception workshops were assumed directly, allowing to align technical vision, business rules and UX. The work also included the evangelization of stakeholders with specific training.",
           impact: [
              "Complete functional model for three profiles (employee, consultant, supervisor).",
-             "Clear and prioritized backlog, allowing predictability and continuous development.",
-             "Redesigned interface after designer departure, ensuring continuity without tempo loss.",
-             "Structured story mapping and journeys, enabling faster and more assertive decisions.",
-             "Aligned stakeholders thanks to training and applied pedagogy.",
-             "Stabilized project, avoiding cancellation risk and ensuring consistent delivery."
+             "Backlog clear and prioritized, allowing predictability and continuous development.",
+             "Interface redesigned after designer departure, ensuring continuity without loss of rhythm.",
+             "Structured story mapping and journeys, allowing faster and more assertive decisions.",
+             "Stakeholders aligned, thanks to specific training and applied pedagogy.",
+             "Project stabilized, avoiding the risk of cancellation and ensuring constant delivery."
           ],
           tags: ["FunctionalDesign", "AgileFrameworks", "ProductDiscovery", "UXThinking", "BacklogStrategy", "ServiceDesign", "ProcessMapping", "Prototyping"]
         },
         {
           name: "Coupon Network",
-          client: "Catalina",
-          role: "Product Owner (2018-2019)",
+          client: "CATALINA",
+          role: "Product Owner",
           type: "B2C Mobile & Web App",
-          summary: "Continuous evolution of Catalina's cashback app and site, focused on improving engagement, usability, and campaign performance. Includes the creation of a raffles module that transformed user participation and elevated activation efficiency.",
-          challenge: "The Coupon Network app had a large user base, but promotional actions had low visibility, and raffles were conducted disconnectedly: users were selected without knowing they were participating. This caused wasted opportunity, low base qualification, and complaints. The challenge was to create a clear, visual, motivating, and operationally efficient experience.",
-          solution: "I started with problem diagnosis, data analysis, and internal interviews. I conducted ideation workshops and a live wireframing co-construction session—an unusual but effective approach to align marketing, stakeholders, and tech. The module was conceived end-to-end: hypotheses, benchmark, prototype, functional definitions, eligibility criteria, ticket logic, and participation flows. I monitored development through to delivery and post-launch impact analysis.",
+          summary: "Continuous evolution of Catalina's cashback app and site, with a focus on improving engagement, usability and campaign performance. Includes the creation of a raffles module that transformed user participation and elevated activation efficiency.",
+          challenge: "The Coupon Network app had a large user base, but promotional actions had low visibility and raffles were conducted disconnectedly: users were selected without knowing they were participating. This generated wasted opportunity and complaints. The challenge was to create a clear, visual, motivating and operationally efficient experience.",
+          solution: "The action started with a diagnosis, data analysis and interviews. Ideation workshops and a live wireframe co-construction session were conducted — an effective approach to align marketing, stakeholders and tech. The module was designed from end to end: hypotheses, benchmark, prototype, functional definitions, eligibility criteria, ticket logic and participation flow. The development was followed until delivery and impact analysis.",
           impact: [
-             "New raffles module integrated into app/site with explicit user participation.",
-             "Gamified experience with clear eligibility criteria (e.g., validating coupons).",
-             "More qualified base, with participants fully aware of the campaign.",
-             "Reduced conversion cost with significant improvement in activation performance.",
-             "Stabilized engagement flow, reducing ambiguities and complaints.",
+             "New raffle module integrated into the app and site, with explicit participation.",
+             "Gamified experience, with clear eligibility criteria (e.g., validate coupons).",
+             "Base but qualified, with participants fully aware of the campaign.",
+             "Reduction in conversion cost, with expressive improvement in activation performance.",
+             "Engagement flow stabilized, reducing ambiguities and complaints.",
              "Fluid integration with marketing, facilitating new campaigns and A/B tests."
           ],
           tags: ["ProductDiscovery", "FunctionalDesign", "UXIdeation", "Prototyping", "EngagementDesign", "DataInformedDecisions", "BacklogDelivery", "MobileProduct"]
         },
         {
           name: "Tech'Assist",
-          client: "Valeo",
-          role: "PO / Project Manager (2016-2018)",
+          client: "VALEO",
+          role: "PO / Project Manager",
           type: "Internal Tool / Data",
-          summary: "Complete redefinition of Valeo's global technical support tool, responsible for sustaining operations in dozens of countries. The project required large-scale functional conception, robust technical documentation, and international standardization of flows and data.",
-          challenge: "TechAssist was a strategic tool used by thousands of technicians globally but suffered from obsolete technology, weak usability, and an engineer-centric structure distant from end-user needs. Valeo needed to renew the entire system, including functional architecture, technical content, navigation, and export mechanisms for different markets and languages.",
-          solution: "I conducted benchmarks, deep usage analysis, and identification of critical failures to structure the new functional version. Over 90 pages of specs were produced, including technical schemas, detailed flows, documentation rules, interface behaviors, and navigation patterns. Multi-language and multi-instance management (up to 16 environments) was organized with reproducible processes. I also designed and implemented the XML export mechanism essential for feeding local markets.",
+          summary: "Complete redefinition of Valeo's global technical support tool, responsible for supporting operations in dozens of countries. The project required large-scale functional design, robust technical documentation and international standardization of flows and data.",
+          challenge: "TechAssist was a strategic tool used by thousands of technicians, but suffered from obsolete technology, weak usability and an engineer-centric structure — far from real needs. Valeo had to renew the entire system, including functional architecture, technical content, navigation and export mechanisms for different markets and languages.",
+          solution: "Benchmark studies and deep usage analysis were conducted to identify critical failures and structure the new version. More than 90 pages of specifications were produced, including technical diagrams, detailed flows, documentation rules and navigation models. Multi-language and multi-instance management was organized. The intervention included the design and implementation of the XML export mechanism, essential for feeding local markets.",
           impact: [
-             "Complete functional base, replacing the old version with clear, scalable architecture.",
-             "Robust documentation (+90 pages) to sustain technical teams and internationalization.",
+             "Complete functional base, replacing the old version with a clear and scalable architecture.",
+             "Robust documentation (+90 pages) to support the technical team and internationalization.",
              "XML export process implemented and standardized for multiple markets.",
-             "Structured backlog with epics, features, and US ready for development.",
-             "Improved usability and consistency, fixing historical product issues.",
-             "Reduced technical dependency thanks to reusable patterns and processes."
+             "Structured backlog, with epics, features and US ready for development.",
+             "Better usability and consistency, correcting historical issues.",
+             "Reduced technical dependence, thanks to standards and reusable processes."
           ],
           tags: ["FunctionalDesign", "TechnicalDocumentation", "ProcessEngineering", "BacklogDefinition", "Globalization", "XMLIntegration", "ProductDelivery", "UXStructure"]
         }
@@ -393,7 +394,7 @@ const DATA: Record<Language, Content> = {
           year: "2020",
           desc: "Train functional Salesforce consultants for CRM configuration and support.",
           details: ["sales process modeling", "object configuration", "flow automation", "CRM integration", "reporting", "functional consulting"],
-          domain: "salesforce.com"
+          domain: "fitec.fr"
         },
         {
           degree: "Innovation Management Specialization",
@@ -437,13 +438,13 @@ const DATA: Record<Language, Content> = {
           details: ["backlog management", "value definition", "user stories", "sprint planning", "stakeholder alignment", "product metrics"],
           domain: "scrum.org" 
         },
-        { 
-          name: "Salesforce Administrator", 
-          issuer: "Salesforce", 
-          year: "2020", 
+        {
+          name: "Salesforce Administrator",
+          issuer: "Salesforce",
+          year: "2020",
           desc: "Qualify administrators to configure and maintain Salesforce environments.",
           details: ["user and security model", "automation (Flows)", "objects & fields", "dashboards & reports", "platform configuration", "process optimization"],
-          domain: "salesforce.com" 
+          domain: "salesforce.com"
         }
       ]
     },
@@ -453,28 +454,28 @@ const DATA: Record<Language, Content> = {
         {
           name: "AI & Automation",
           icon: Zap,
-          items: ["LLM Integration", "Prompt Engineering", "Embeddings & Vector DB", "n8n Workflows", "Agentic AI Orchestration", "OpenAI / Gemini APIs", "No-code / Low-code Automation", "Supabase Functions & Webhooks"]
+          items: ["LLM Integration", "Prompt Engineering", "n8n Workflows", "Agentic AI Orchestration"]
         },
         {
           name: "Product Foundations",
           icon: Layers,
-          items: ["Product Discovery", "Agile Delivery", "SCRUM", "Roadmapping", "User Stories & Functional Specs", "Backlog Strategy & Prioritization", "Story Mapping", "Behavior Driven Development", "Gherkin", "Service Design Tools"]
+          items: ["Product Discovery", "Agile Delivery", "SCRUM", "Backlog Strategy", "User Stories", "BDD"]
         },
         {
           name: "Design & Prototyping",
           icon: PenTool,
-          items: ["Figma", "Adobe XD", "Miro", "Framer", "Webflow", "Wireframing", "Rapid Prototyping", "Interaction Mapping", "Interface Architecture"]
+          items: ["Figma", "Adobe XD", "Miro", "Framer", "Webflow", "Wireframing"]
         },
         {
           name: "Technical",
           icon: Code,
-          items: ["HTML / CSS", "Databases (MySQL, Supabase, pgvector)", "XML / JSON", "API Consumption & Webhooks", "Analytics (GA, Looker Studio)", "Data Modeling (basic)"]
+          items: ["HTML / CSS", "Databases (MySQL, Supabase)", "XML / JSON", "APIs & Webhooks"]
         }
       ]
     },
     contact: {
       title: "Let's Connect",
-      text: "I’m open to new opportunities and conversations. If you’d like to connect or discuss a project, feel free to reach out — I’ll get back to you soon.",
+      text: "If you’d like to connect or discuss a project, feel free to reach out — I’ll get back to you soon.",
       cta_email: "Send Email",
       cta_linkedin: "LinkedIn Profile",
       cta_phone: "Call Me"
@@ -494,15 +495,15 @@ const DATA: Record<Language, Content> = {
     hero: {
       role: "SPÉCIALISTE PRODUIT DIGITAL",
       subrole: "ENTHOUSIASTE IA, AUTOMATION & NO-CODE",
-      description: "Concevoir des produits digitaux où convergent utilisabilité, structure et intelligence. J'allie pensée centrée utilisateur, design fonctionnel et automatisation IA pour créer des expériences performantes — à la fois belles et efficaces.",
+      description: "Concevoir des produits digitaux où convergent utilisabilité, structure et intelligence. J'allie pensée centrée utilisateur, design fonctionnel et automatisation IA pour créer des expériences performantes.",
       cta_contact: "Me contacter",
       cta_cv: "Télécharger CV",
       trilingual: "TRILINGUE"
     },
     about: {
       title: "À Propos",
-      p1: "Avec 6 ans d'expérience dans la conception et la structuration de produits numériques, je transforme des exigences complexes en solutions claires, utilisables et intelligentes. Mon travail allie pensée centrée utilisateur, design fonctionnel et pratiques agiles solides pour créer des produits scalables et à forte valeur.",
-      p2: "J'ai piloté discovery, spécification et delivery pour des projets d'accessibilité, des plateformes multi-profils et des systèmes d'entreprise — toujours avec rigueur, cohérence et un focus sur les besoins réels. Aujourd'hui, j'intègre l'automatisation et l'IA dans les workflows pour accélérer les équipes et enrichir les produits. Je crois que la clarté, l'empathie et la collaboration sont la clé des grands produits — et j'apporte ces principes dans chaque environnement où je travaille."
+      p1: "Avec 6 ans d'expérience dans la conception et la structuration de produits numériques, je transforme des exigences complexes en solutions claires, utilisables et intelligentes.",
+      p2: "J'ai piloté discovery, spécification et delivery pour des projets d'accessibilité, des plateformes multi-profils et des systèmes d'entreprise — toujours avec rigueur et cohérence."
     },
     services: {
       title: "Ce Que Je Fais",
@@ -512,23 +513,21 @@ const DATA: Record<Language, Content> = {
           title: "Je crée des automatisations intelligentes",
           desc: "Je conçois des automatisations qui réduisent le travail manuel et augmentent l'efficacité opérationnelle grâce à l'IA.",
           points: [
-            "Orchestration d'agents IA & flux complexes (Agentic AI + n8n)",
-            "Intégration de LLMs (OpenAI/Gemini) dans les produits & processus",
+            "Orchestration d'agents IA (Agentic AI + n8n)",
+            "Intégration de LLMs dans les produits & processus",
             "Création d'embeddings & architectures Vector DB",
-            "Automatisations de bout en bout via API & webhooks",
-            "Conception de systèmes hybrides (Humain + IA) axés sur l'impact"
+            "Automatisations via API & webhooks"
           ]
         },
         {
           id: "po",
-          title: "Je structure et porte les produits digitaux",
+          title: "Je structure les produits digitaux",
           desc: "Je transforme les objectifs commerciaux en produits clairs, bien définis et prêts à être construits.",
           points: [
-            "Structuration de backlogs & critères d'acceptation solides",
-            "Rédaction de user stories, epics & spécifications fonctionnelles",
-            "Application du Behavior-Driven Development (Gherkin)",
-            "Alignement besoins utilisateurs, règles métier & capacités techniques",
-            "Organisation constante de la vision, du périmètre & de la roadmap"
+            "Structuration de backlogs & critères d'acceptation",
+            "Rédaction de user stories & spécifications",
+            "Application du BDD (Gherkin)",
+            "Alignement métier & capacités techniques"
           ]
         },
         {
@@ -536,35 +535,32 @@ const DATA: Record<Language, Content> = {
           title: "Je façonne la stratégie produit",
           desc: "Je définis la direction, priorise la valeur et aide les équipes à prendre de meilleures décisions.",
           points: [
-            "Conduite de discovery, mapping, interviews & analyse d'opportunités",
-            "Structuration de roadmaps, vision, KPIs & résultats mesurables",
-            "Alignement des parties prenantes dans des contextes complexes",
-            "Benchmark, étude de marché & analyse concurrentielle",
-            "Transformation de problèmes non structurés en plans actionnables"
+            "Conduite de discovery & analyse d'opportunités",
+            "Structuration de roadmaps & KPIs",
+            "Alignement des parties prenantes complexes",
+            "Transformation de problèmes en plans actionnables"
           ]
         },
         {
           id: "delivery",
-          title: "Je pilote le delivery et l'exécution",
-          desc: "Je garantis une exécution continue et prévisible dans des environnements agiles et multifonctionnels.",
+          title: "Je pilote le delivery",
+          desc: "Je garantis une exécution continue et prévisible dans des environnements agiles.",
           points: [
-            "Facilitation des cérémonies SCRUM (planning, daily, reviews, retros)",
-            "Orchestration DEV, QA, UX & stakeholders pour une livraison constante",
-            "Gestion des releases (Web + iOS + Android) & flux de publication",
-            "Suivi de la performance post-lancement & ajustement",
-            "Équilibre entre vitesse, qualité & dépendances techniques"
+            "Facilitation des cérémonies SCRUM",
+            "Orchestration DEV, QA, UX & stakeholders",
+            "Gestion des releases & flux de publication",
+            "Suivi de la performance post-lancement"
           ]
         },
         {
           id: "ux",
-          title: "Je conçois et prototype des expériences",
+          title: "Je prototype des expériences",
           desc: "Je donne forme aux idées en créant des expériences testables et centrées sur l'utilisateur.",
           points: [
-            "Développement de wireframes, flux & prototypes navigables",
-            "Test & validation rapide d'hypothèses avec utilisateurs",
-            "Co-création, recherche UX légère & itérations rapides",
-            "Design d'expériences efficaces, accessibles & cross-platform",
-            "Utilisation de Figma, Framer, Webflow & Miro pour accélérer les cycles"
+            "Développement de wireframes & flux",
+            "Test & validation rapide d'hypothèses",
+            "Design d'expériences accessibles & cross-platform",
+            "Utilisation de Figma & Framer"
           ]
         }
       ]
@@ -578,10 +574,10 @@ const DATA: Record<Language, Content> = {
           company: "Eleven Labs",
           location: "Paris",
           description: [
-            "Gestion du backlog, rédaction d'histoires utilisateur et spécifications fonctionnelles, en coordination avec équipes SEO et marketing.",
-            "Préparation des releases d'une application mobile (iOS, Android), suivi des performances, gestion de la mise en production.",
-            "Animation des cérémonies SCRUM, organisation des démonstrations et supports pour faciliter la communication.",
-            "Accompagnement dans l’amélioration continue du produit, optimisation des processus et documentation.",
+            "Gestion du backlog, rédaction d'histoires utilisateur et spécifications fonctionnelles en coordination avec les équipes SEO et marketing.",
+            "Préparation des releases d'applications mobiles (iOS, Android), suivi des performances, gestion de la mise en production.",
+            "Animation des cérémonies SCRUM, organisation des démos et supports de communication.",
+            "Accompagnement de l'amélioration continue du produit, optimisation des process et documentation.",
             "Conception d’applications intégrant l’IA."
           ],
           tech: ["IA", "Mobile", "SCRUM"]
@@ -592,12 +588,12 @@ const DATA: Record<Language, Content> = {
           company: "Akkodis",
           location: "Paris",
           description: [
-            "Pilotage de plusieurs projets en parallèle, du discovery au delivery, pour des applications web, desktop (Windows/macOS) et mobile (iOS/Android).",
-            "Coordination transverse des équipes DEV/QA/UX, synchronisation des travaux et gestion des dépendances pour sécuriser les livraisons.",
-            "Ateliers de co‑création, benchmarks et story mapping pour cadrer la valeur et aligner les parties prenantes.",
-            "Conception et validation de prototypes: wireframes/maquettes, tests utilisateurs ciblés et itérations rapides.",
-            "Recueil, formalisation et challenge des besoins; rédaction de spécifications fonctionnelles et user stories en BDD.",
-            "Cadre agile mis en place: priorisation du backlog par valeur, sprints (planning, reviews, rétros) et démonstrations régulières."
+            "Pilotage de plusieurs projets parallèles du discovery au delivery (Web, Windows/macOS, iOS/Android).",
+            "Coordination transverse des équipes DEV/QA/UX et gestion des dépendances.",
+            "Ateliers de co-création, benchmarks et story mapping pour cadrer la valeur.",
+            "Conception et validation de prototypes : wireframes/maquettes, tests utilisateurs ciblés.",
+            "Recueil, formalisation et challenge des besoins ; rédaction de spécifications fonctionnelles et user stories BDD.",
+            "Cadre agile mis en place : priorisation par la valeur, sprints (planning, reviews, retros) et démos régulières."
           ],
           tech: ["Cross-platform", "Discovery", "BDD"]
         },
@@ -607,41 +603,41 @@ const DATA: Record<Language, Content> = {
           company: "Actency",
           location: "Paris",
           description: [
-            "Responsable applications : Pilotage du RUN multi‑comptes avec priorisation et suivi budgétaire, assurant la continuité de service.",
-            "Planification des lots et coordination quotidienne avec les équipes techniques et design pour sécuriser les mises en production.",
-            "Proxy PO : Interventions d’avant‑vente et cadrage produit, structuration des backlogs initiaux.",
-            "Conduite de story mapping, wireframing et recherche UX (entretiens, synthèse d’insights) pour aligner produit‑utilisateur."
+            "Application Manager : Pilotage du RUN multi-comptes avec priorisation et suivi budgétaire pour assurer la continuité de service.",
+            "Planification des batches et coordination quotidienne avec les équipes tech/design pour sécuriser les mises en production.",
+            "Proxy PO : Interventions avant-vente, cadrage produit et structuration des backlogs initiaux.",
+            "Conduite de story mapping, wireframing et recherche UX (entretiens, insights) pour aligner besoins produit-utilisateur."
           ],
-          tech: ["Conseil", "UX Research", "Avant-vente"]
+          tech: ["Conseil", "UX Research", "Pre-sales"]
         },
         {
-          period: "Sep 2018 - Juillet 2019",
-          role: "Junior Digital Project Manager / PO",
+          period: "Sept 2018 - Juil 2019",
+          role: "Chef de Projet Digital Junior / PO",
           company: "Catalina Marketing",
           location: "Boulogne-Billancourt",
           description: [
-            "Maintenance évolutive et livraison de nouvelles fonctionnalités conformément à la roadmap produit, avec continuité de service assurée.",
-            "Ateliers de co‑création et benchmark concurrentiel pour identifier des opportunités UX et prioriser les améliorations à plus forte valeur.",
-            "Conception et validation de prototypes: wireframes/maquettes testés auprès des stakeholders avant développement.",
-            "Gestion du backlog: rédaction d’Epics et User Stories, priorisation et coordination quotidienne avec des équipes techniques (França/Offshore).",
-            "Garantie qualité: préparation et exécution de tests de non‑régression et suivi des corrections jusqu’à la mise en production.",
-            "Documentation et communication: spécifications fonctionnelles, comptes‑rendus de sprint et démonstrations régulières."
+            "Maintenance évolutive et livraison de nouvelles fonctionnalités selon la roadmap produit, garantissant la continuité du service.",
+            "Ateliers de co-création et benchmark concurrentiel pour identifier les opportunités UX et prioriser les améliorations à forte valeur.",
+            "Conception et validation de prototypes : wireframes/maquettes testés auprès des stakeholders avant développement.",
+            "Gestion du backlog : rédaction d'Epics et User Stories, priorisation et coordination quotidienne avec les équipes tech (France/Offshore).",
+            "Assurance Qualité : préparation et exécution des tests de non-régression et suivi des correctifs jusqu'en production.",
+            "Documentation & Communication : spécifications fonctionnelles, rapports de sprint et démos régulières aux parties prenantes."
           ],
-          tech: ["Offshore Mgmt", "UX Design", "QA"]
+          tech: ["Gestion Offshore", "UX Design", "QA"]
         },
         {
-          period: "Sep 2016 - Août 2018",
+          period: "Sept 2016 - Août 2018",
           role: "Chef de Projet Digital / PO",
           company: "Valeo",
           location: "Saint Denis",
           description: [
-            "Pilotage de la refonte de Tech’Assist (plateforme support technique Valeo), selon une approche Design Thinking centrée utilisateur.",
-            "Analyse des besoins métier et benchmark; cadrage via charte projet, spécifications fonctionnelles et schémas techniques.",
-            "Transformação des exigences en backlog structuré (Epics, Features, User Stories) avec priorisation et suivi.",
-            "Mise en place de tableaux de bord de pilotage et de performance sur Google Data Studio.",
-            "Optimisation du traitement des incidents sur les sites Valeo Service, avec formalisation de procédures.",
-            "Conception et déploiement d’un export documentaire XML pour accélérer la migration de l’ancienne plateforme XWiki vers Drupal.",
-            "Garantie qualité: tests de non‑régression, formations internes et évangélisation du Back Office."
+            "Pilotage de la refonte Tech'Assist (plateforme de support technique Valeo) selon une approche Design Thinking centrée utilisateur.",
+            "Analyse des besoins métier et benchmark concurrentiel ; cadrage via charte projet, spécifications fonctionnelles et schémas techniques.",
+            "Transformation des besoins en backlog structuré (Epics, Features, User Stories) avec priorisation et suivi.",
+            "Mise en place de dashboards de pilotage et de performance sur Google Data Studio.",
+            "Optimisation du traitement des incidents pour les sites Valeo Service, avec formalisation des procédures.",
+            "Conception et déploiement d'un export documentaire XML pour accélérer la migration de XWiki vers Drupal.",
+            "Assurance Qualité : préparation/exécution des tests de non-régression, formation interne et évangélisation Back Office."
           ],
           tech: ["Design Thinking", "Data Studio", "Migration"]
         }
@@ -660,33 +656,33 @@ const DATA: Record<Language, Content> = {
         {
           name: "DERi",
           client: "Université Paul Sabatier",
-          role: "Product Owner (2022-2024)",
+          role: "Product Owner",
           type: "R&D / Accessibilité",
           summary: "Solution complète pour la création et la consommation de contenus éducatifs tactiles et sonores, composée d'un éditeur desktop et d'une app mobile orientée vers les étudiants aveugles. Le projet exigeait une structure fonctionnelle robuste, des règles d'interaction avancées et une stratégie agile capable d'organiser un écosystème entièrement nouveau.",
-          challenge: "Les chercheurs de l'Université Paul Sabatier cherchaient à moderniser l'accès à l'apprentissage pour les personnes déficientes visuelles. La limitation du matériel braille, la rareté des exemplaires et le manque de ressources numériques accessibles créaient des barrières profondes. Il était nécessaire de concevoir deux applications interconnectées — l'une pour la création d'interactions multimodais (tactile, relief, gesture et audio) et l'autre pour permettre leur exploration par les étudiants — tout en maintenant cohérence, accessibilité et rigueur fonctionnelle.",
-          solution: "L'intervention a impliqué de structurer tout le fonctionnement de l'écosystème, en menant des entretiens, en définissant le périmètre et en installant un cadre agile complet avec workflows et règles de criticité. Des parcours complexes, story mapping et roadmap ont été modélisés, ainsi que la création de toutes les règles d'interaction tactile et sonore. Le backlog a été rédigé intégralement en BDD/Gherkin pour garantir la précision technique. La documentation a été adaptée pour les lecteurs d'écran. Avec le départ du designer, j'ai assumé la conception des interfaces — assurant continuité et validation auprès de l'équipe technique et des chercheurs.",
+          challenge: "Les chercheurs de l'Université Paul Sabatier cherchaient à moderniser l'accès à l'apprentissage pour les personnes déficientes visuelles. La limitation du matériel braille, la rareté des exemplaires et le manque de ressources numériques accessibles créaient des barrières profondes. Il était nécessaire de concevoir deux applications interconnectées — l'une pour la création d'interactions multimodales (tactile, relief, gesture e audio) et l'autre pour permettre leur exploration par les étudiants — tout en maintenant cohérence, accessibilité et rigueur fonctionnelle.",
+          solution: "L'intervention a impliqué de structurer tout le fonctionnement de l'écosystème, en menant des entretiens, en définissant le périmètre e en installant un cadre agile complet avec workflows et règles de criticité. Des parcours complexes, story mapping et roadmap ont été modélisés, ainsi que la création de toutes les règles d'interaction tactile et sonore. Le backlog a été rédigé intégralement en BDD/Gherkin pour garantir la précision technique. La documentation a été adaptée pour les lecteurs d'écran. Avec le départ du designer, j'ai assumé la conception des interfaces — assurant continuité et validation auprès de l'équipe technique et des chercheurs.",
           impact: [
              "Écosystème fonctionnel complet : spécifications détaillées pour éditeur desktop e app mobile.",
-             "Cadre agile implémenté : workflows, DoR, story mapping et roadmap operacional.",
+             "Cadre agile implémenté : workflows, DoR, story mapping et roadmap opérationnel.",
              "Backlog structuré en BDD, éliminant l'ambiguïté et réduisant le retravail.",
              "Interfaces conçues et livrées sans designer, maintenant la cohérence visuelle et fonctionnelle.",
              "Sprints plus prévisibles, avec un alignement fort entre UX, accessibilité et développement.",
              "Processus de collaboration simplifié, y compris pour les utilisateurs aveugles et les chercheurs techniques."
           ],
-          tags: ["FunctionalDesign", "Accessibility", "ProductDiscovery", "UXThinking", "AgileFrameworks", "BacklogStrategy", "BDD", "Prototyping"]
+          tags: ["FunctionalDesign", "Accessibility", "ProductDiscovery", "UXThinking", "AgileFrameworks", "BDD", "Prototyping"]
         },
         {
           name: "CASP",
           client: "LHH",
-          role: "Proxy PO (2021-2022)",
+          role: "Proxy PO",
           type: "Plateforme SaaS B2B",
-          summary: "Portail intégré pour employés, consultants et superviseurs, créé pour structurer et centraliser tout le processus de transition professionnelle après des licenciements économiques. Le projet exigeait une clareza fonctionnelle, une modélisation de parcours complexes et une organisation agile capable de donner vie à des interactions critiques entre múltiplos profils.",
-          challenge: "LHH devait moderniser la gestion des processus de licenciement économique, traditionnellement menés par téléphone, e-mails et visites. Il manquait une plateforme unique permettant aux employés d'accéder aux infos, d'envoyer des documents ou de contacter des consultants. Le défi incluait de multiples profils, une littératie numérique limitée et une forte pression pour la clareza et la prévisibilité.",
+          summary: "Portail intégré pour employés, consultants et superviseurs, créé pour structurer et centraliser tout le processus de transition professionnelle après des licenciements économiques. Le projet exigeait une clarté fonctionnelle, une modélisation de parcours complexes et une organisation agile capable de donner vie à des interactions critiques entre multiples profils.",
+          challenge: "LHH devait moderniser la gestion des processus de licenciement économique, traditionnellement menés par téléphone, e-mails et visites. Il manquait une plateforme unique permettant aux employés d'accéder aux infos, d'envoyer des documents ou de contacter des consultants. Le défi incluait de multiples profils, une littératie numérique limitée et une forte pression pour la clarté et la prévisibilité.",
           solution: "L'intervention a impliqué l'analyse profonde du processus existant et la structuration des trois flux principaux (employé, consultant, superviseur). Des entretiens, cartographie de parcours, story mapping et définition de requis fonctionnels ont été menés. Le cadre agile a été installé de zéro. Avec le départ inattendu du designer, tout le design fonctionnel et les ateliers de conception ont été assumés directement, permettant d'aligner vision technique, règles métier et UX. Le travail a aussi inclus l'évangélisation des parties prenantes avec des formations spécifiques.",
           impact: [
              "Modèle fonctionnel complet pour trois profils (employé, consultant, superviseur).",
              "Backlog clair et priorisé, permettant prévisibilité et développement continu.",
-             "Interface redesenhada após saída do designer, assurant la continuité sans perte de rythme.",
+             "Interface redesignée après départ du designer, assurant la continuité sans perte de rythme.",
              "Story mapping et parcours structurés, permettant des décisions plus rapides et assertives.",
              "Parties prenantes alignées, grâce à la formation et à la pédagogie appliquée.",
              "Projet stabilisé, évitant le risque d'annulation et assurant une livraison constante."
@@ -695,16 +691,16 @@ const DATA: Record<Language, Content> = {
         },
         {
           name: "Coupon Network",
-          client: "Catalina",
-          role: "Product Owner (2018-2019)",
-          type: "App Mobile & Web B2C",
+          client: "CATALINA",
+          role: "Product Owner",
+          type: "APP MOBILE & WEB B2C",
           summary: "Évolution continue de l'application et du site de cashback de Catalina, avec un focus sur l'amélioration de l'engagement, de l'utilisabilité et de la performance des campagnes. Inclut la création d'un module de tirages au sort qui a transformé la participation des utilisateurs et élevé l'efficacité des activations.",
-          challenge: "L'application Coupon Network avait une grande base d'utilisateurs, mais les actions promotionnelles avaient une faible visibilité et les tirages au sort étaient menés de façon déconnectée : les utilisateurs étaient sélectionnés sans savoir qu'ils participaient. Cela générait un gaspillage d'opportunité et des réclamations. Le défi était de créer une expérience claire, visuale, motivante et opérationnellement efficace.",
+          challenge: "L'application Coupon Network avait une grande base d'utilisateurs, mas les actions promotionnelles avaient une faible visibilité et les tirages au sort étaient menés de façon déconnectée : les utilisateurs étaient sélectionnés sans savoir qu'ils participaient. Cela générait un gaspillage d'opportunité et des réclamations. Le défi était de créer une expérience claire, visuelle, motivante et opérationnellement efficace.",
           solution: "L'action a commencé par un diagnostic, analyse de données et entretiens. Des ateliers d'idéation et une session de co-construction de wireframes en direct ont été menés — une approche efficace pour aligner marketing, parties prenantes et tech. Le module a été conçu de bout en bout : hypothèses, benchmark, prototype, définitions fonctionnelles, critères d'éligibilité, logique de tickets et flux de participation. Le développement a été suivi jusqu'à la livraison et l'analyse d'impact.",
           impact: [
              "Nouveau module de tirages intégré à l'app et au site, avec participation explicite.",
              "Expérience gamifiée, avec critères clairs d'éligibilité (ex.: valider des coupons).",
-             "Base mais qualifiée, avec des participants pleinement conscients de la campagne.",
+             "Base mas qualifiée, avec des participants pleinement conscients de la campagne.",
              "Réduction du coût de conversion, avec amélioration expressive de la performance.",
              "Flux d'engagement stabilisé, réduisant ambiguïtés et réclamations.",
              "Intégration fluide avec le marketing, facilitant de nouvelles campagnes et A/B tests."
@@ -713,11 +709,11 @@ const DATA: Record<Language, Content> = {
         },
         {
           name: "Tech'Assist",
-          client: "Valeo",
-          role: "PO / Chef de Projet (2016-2018)",
-          type: "Outil Interne / Data",
+          client: "VALEO",
+          role: "PO / Chef de Projet",
+          type: "OUTIL INTERNE / DATA",
           summary: "Redéfinition complète de l'outil mondial d'assistance technique de Valeo, responsable de soutenir les opérations dans des dizaines de pays. Le projet exigeait une conception fonctionnelle à grande échelle, une documentation technique robuste et une standardisation internationale des flux et des données.",
-          challenge: "TechAssist était un outil stratégique utilisé par des milliers de techniciens, mais souffrait d'une technologie obsolète, d'une usabilité faible et d'une structure centrée ingénieur — loin des besoins réels. Valeo devait renouveler tout le système, incluant architecture fonctionnelle, contenu technique, navigation et mécanismes d'export pour différents marchés et langues.",
+          challenge: "TechAssist était un outil stratégique utilisé par des milliers de techniciens, mas souffrait d'une technologie obsolète, d'une usabilité faible et d'une structure centrée ingénieur — loin des besoins réels. Valeo devait renouveler tout le système, incluant architecture fonctionnelle, contenu technique, navigation et mécanismes d'export pour différents marchés et langues.",
           solution: "Des études de benchmark et une analyse profonde de l'usage ont été menées pour identifier les failles critiques et structurer la nouvelle version. Plus de 90 pages de spécifications ont été produites, incluant schémas techniques, flux détaillés, règles de documentation et modèles de navigation. La gestion multi-langue et multi-instance a été organisée. L'intervention a inclus le dessin et l'implémentation du mécanisme d'export XML, essentiel pour alimenter les marchés locaux.",
           impact: [
              "Base fonctionnelle complète, remplaçant l'ancienne version par une architecture claire et scalable.",
@@ -734,49 +730,49 @@ const DATA: Record<Language, Content> = {
     experimentations: {
       title: "Mes Expérimentations",
       subtitle: "LABORATOIRE EXPÉRIMENTAL",
-      message: "Idées préliminaires et prototypes IA en cours de reconstruction."
+      message: "Idées préliminaire et prototypes IA en cours de reconstruction."
     },
     education: {
       title: "Formation & Certifications",
       academic: [
         {
-          degree: "Développeur No-code & Automatisations IA (Agentic AI)",
+          degree: "Développeur No-code & Automatisations IA (Agentic IA)",
           school: "No-Code StartUp",
           year: "2025 - 2026",
           desc: "Former à la création d'automatisations et d'agents IA dans un environnement no-code.",
-          details: ["workflow automation", "AI agents design", "API integration", "no-code systems", "rapid prototyping", "data structuring for automation"],
+          details: ["automatisation de workflows", "conception d'agents IA", "intégration d'API", "systèmes no-code", "prototypage rapide", "structuration de données pour l'automatisation"],
           domain: "nocodestartup.io"
         },
         {
-          degree: "Consultant Technico Fonctionnel CRM Salesforce",
+          degree: "Consultant CRM Salesforce",
           school: "FITEC",
           year: "2020",
-          desc: "Former des consultants fonctionnels Salesforce pour la configuration et le support CRM.",
-          details: ["sales process modeling", "object configuration", "flow automation", "CRM integration", "reporting", "functional consulting"],
-          domain: "salesforce.com"
+          desc: "Former des consultants Salesforce fonctionnels pour la configuration et le support CRM.",
+          details: ["modélisation des processus de vente", "configuration des objets", "automatisation des flux", "intégration CRM", "reporting", "conseil fonctionnel"],
+          domain: "fitec.fr"
         },
         {
-          degree: "Master Manager des Systèmes d’Information et du Numérique",
-          school: "Grenoble Ecole de Management",
-          year: "2017 - 2019",
-          desc: "Former à la gestion des systèmes d'information et des projets numériques stratégiques.",
-          details: ["digital strategy", "IT governance", "systems architecture", "project management", "data-driven decision making", "transformation frameworks"],
-          domain: "grenoble-em.com"
-        },
-        {
-          degree: "Spécialisation Management de l’innovation",
+          degree: "Spécialisation Management de l'Innovation",
           school: "HEC Paris",
           year: "2019",
-          desc: "Développer des compétences pour mener l'innovation en entreprise.",
-          details: ["innovation strategy", "design thinking", "MVP creation", "prototyping methods", "opportunity assessment", "market analysis"],
+          desc: "Développer les compétences pour diriger l'innovation en entreprise.",
+          details: ["stratégie d'innovation", "design thinking", "création de MVP", "méthodes de prototypage", "évaluation d'opportunités", "analyse de marché"],
           domain: "hec.edu"
         },
         {
-          degree: "Bachelor Webdesign UX/UI",
+          degree: "Master en Systèmes d'Information & Management Digital",
+          school: "Grenoble Ecole de Management",
+          year: "2017 - 2019",
+          desc: "Habiliter à gérer les systèmes d'information et les projets digitaux stratégiques.",
+          details: ["stratégie digitale", "gouvernance IT", "architecture des systèmes", "gestion de projet", "prise de décision basée sur les données", "frameworks de transformation"],
+          domain: "grenoble-em.com"
+        },
+        {
+          degree: "Bachelor en Webdesign UX/UI",
           school: "Supdeweb Paris",
           year: "2016 - 2017",
-          desc: "Former des professionnels UX/UI pour le web et le mobile.",
-          details: ["interface design", "wireframing", "user flows", "visual systems", "prototyping", "usability principles", "responsive design"],
+          desc: "Former les professionnels UX/UI pour le web et le mobile.",
+          details: ["conception d'interface", "wireframing", "user flows", "systèmes visuels", "prototypage", "principes d'utilisabilité", "responsive design"],
           domain: "supdeweb.com"
         }
       ],
@@ -785,25 +781,25 @@ const DATA: Record<Language, Content> = {
           name: "AI Product Manager", 
           issuer: "IBM Professional Certification", 
           year: "2025", 
-          desc: "Certifier les professionnels à la gestion stratégique de produits IA.",
-          details: ["AI product strategy", "ML fundamentals", "evaluation metrics", "AI governance", "ethical considerations", "roadmap definition"],
+          desc: "Certifier les professionnels dans la gestion stratégique de produits IA.",
+          details: ["stratégie produit IA", "fondamentaux du ML", "métriques d'évaluation", "gouvernance de l'IA", "considérations éthiques", "définition de roadmap"],
           domain: "ibm.com" 
         },
         { 
           name: "Professional Scrum Product Owner (PSPO)", 
           issuer: "Scrum.org", 
           year: "2020", 
-          desc: "Valider la maîtrise du rôle de Product Owner dans le cadre Scrum.",
-          details: ["backlog management", "value definition", "user stories", "sprint planning", "stakeholder alignment", "product metrics"],
+          desc: "Valider la maîtrise du rôle de Product Owner dans le framework Scrum.",
+          details: ["gestion du backlog", "définition de la valeur", "user stories", "planification de sprint", "alignement des parties prenantes", "métriques produit"],
           domain: "scrum.org" 
         },
-        { 
-          name: "Salesforce Administrator", 
-          issuer: "Salesforce", 
-          year: "2020", 
+        {
+          name: "Administrateur Salesforce",
+          issuer: "Salesforce",
+          year: "2020",
           desc: "Qualifier les administrateurs pour configurer et maintenir les environnements Salesforce.",
-          details: ["user and security model", "automation (Flows)", "objects & fields", "dashboards & reports", "platform configuration", "process optimization"],
-          domain: "salesforce.com" 
+          details: ["modèle utilisateur et sécurité", "automatisation (Flows)", "objets & champs", "tableaux de bord & rapports", "configuration de plateforme", "optimisation des processus"],
+          domain: "salesforce.com"
         }
       ]
     },
@@ -813,28 +809,28 @@ const DATA: Record<Language, Content> = {
         {
           name: "IA & Automatisation",
           icon: Zap,
-          items: ["Intégration LLM", "Prompt Engineering", "Embeddings & Vector DB", "Workflows n8n", "Orquestration IA Agentique", "APIs OpenAI / Gemini", "Automatisation No-code / Low-code", "Fonctions Supabase & Webhooks"]
+          items: ["Intégration LLM", "Prompt Engineering", "Workflows n8n", "Agentic AI Orchestration"]
         },
         {
           name: "Fondamentaux Produit",
           icon: Layers,
-          items: ["Product Discovery", "Agile Delivery", "SCRUM", "Roadmapping", "User Stories & Spécs Fonctionnelles", "Stratégie Backlog & Priorisation", "Story Mapping", "Behavior Driven Development", "Gherkin", "Outils Service Design"]
+          items: ["Discovery", "Agile Delivery", "SCRUM", "Backlog Strategy", "User Stories", "BDD"]
         },
         {
-          name: "Design & Prototypage",
+          name: "Design & Technique",
           icon: PenTool,
-          items: ["Figma", "Adobe XD", "Miro", "Framer", "Webflow", "Wireframing", "Prototypage Rapide", "Mapping d'Interaction", "Architecture d'Interface"]
+          items: ["Figma", "Adobe XD", "Miro", "Framer", "Webflow", "Wireframing"]
         },
         {
           name: "Technique",
           icon: Code,
-          items: ["HTML/CSS", "Bases de données (MySQL, Supabase, pgvector)", "XML/JSON", "Consommation API & Webhooks", "Analytics (GA, Looker Studio)", "Modélisation de Données (basique)"]
+          items: ["HTML / CSS", "Bancos de Dados (MySQL, Supabase)", "XML / JSON", "APIs & Webhooks"]
         }
       ]
     },
     contact: {
       title: "Contactez-moi",
-      text: "Je suis ouvert aux nouvelles opportunités et aux échanges. Si vous souhaitez entrer en contact ou discuter d'un projet, n'hésitez pas — je reviendrai vers vous rapidement.",
+      text: "Si vous souhaitez me contacter ou discuter d'un projet, n'hésitez pas — je reviendrai vers vous rapidement.",
       cta_email: "Envoyer un email",
       cta_linkedin: "Profil LinkedIn",
       cta_phone: "M'appeler"
@@ -854,15 +850,15 @@ const DATA: Record<Language, Content> = {
     hero: {
       role: "ESPECIALISTA EM PRODUTO DIGITAL",
       subrole: "ENTUSIASTA IA, AUTOMAÇÃO & NO-CODE",
-      description: "Construindo produtos digitais onde usabilidade, estrutura e inteligência convergem. Combino pensamento centrado no usuário, design funcional e automação via IA para criar experiências que funcionam — com beleza e eficiência.",
+      description: "Construindo produtos digitais onde usabilidade, estrutura e inteligência convergem. Combino pensamento centrado no usuário, design funcional e automação via IA para criar experiências que funcionam — bela e eficientemente.",
       cta_contact: "Entrar em contato",
       cta_cv: "Baixar CV",
       trilingual: "TRILÍNGUE"
     },
     about: {
       title: "Sobre Mim",
-      p1: "Com 6 anos de experiência projetando e estruturando produtos digitais, sou especialista em transformar requisitos complexos em soluções claras, usáveis e inteligentes. Meu trabalho une pensamento centrado no usuário, design funcional e práticas ágeis sólidas para criar produtos escaláveis e de alto valor.",
-      p2: "Já liderei discovery, especificação e entrega em projetos de acessibilidade, plataformas multiperfil e sistemas corporativos — sempre com foco em rigor, coerência e necessidades reais. Hoje, também integro automação e IA nos fluxos de produto para acelerar equipes e potencializar soluções. Acredito que clareza, empatia e colaboração são o que tornam grandes produtos possíveis — e trago esses princípios para todo ambiente em que atuo."
+      p1: "Com 6 anos de experiência projetando e estruturando produtos digitais, sou especialista em transformar requisitos complexos em soluções claras, usáveis e inteligentes. Meu trabalho une pensamento centrado no usuário, design funcional e práticas ágeis sólidas para criar produtos que escalam e entregam valor real.",
+      p2: "Já liderei discovery, especificação e entrega em projetos de acessibilidade, plataformas multiperfil e sistemas corporativos — sempre com foco em rigor, coerência e necessidades reais. Hoje, também integro automação e IA nos fluxos de produto para acelerar equipes e ampliar capacidades. Acredito que clareza, empatia e colaboração são o que tornam grandes produtos possíveis."
     },
     services: {
       title: "O Que Eu Faço",
@@ -872,23 +868,23 @@ const DATA: Record<Language, Content> = {
           title: "Eu crio automações inteligentes",
           desc: "Eu crio automações inteligentes que reduzem trabalho manual e aumentam eficiência operacional usando IA.",
           points: [
-            "Orchestro agentes de IA e fluxos complexos (Agentic AI + n8n)",
-            "Integro LLMs (OpenAI/Gemini) em produtos e processos",
+            "Orchestro agentes de IA (Agentic AI + n8n)",
+            "Integro LLMs em produtos e processos",
             "Crio embeddings e arquiteturas com Vector DB",
-            "Desenvolvo automações ponta a ponta via APIs e webhooks",
-            "Desenho sistemas híbridos (humano + IA) orientados a impacto"
+            "Desenvolvo automações via APIs e webhooks",
+            "Desenho sistemas híbridos (Humano + IA)"
           ]
         },
         {
           id: "po",
-          title: "Eu estruturo e lidero produtos digitais",
+          title: "Eu estruturo produtos digitais",
           desc: "Eu transformo objetivos de negócio em produtos claros, bem definidos e prontos para serem construídos.",
           points: [
-            "Estruturo backlogs e defino critérios de aceitação sólidos",
-            "Escrevo user stories, epics e specs completas",
+            "Estruturo backlogs e critérios sólidos",
+            "Escrevo user stories e specs funcionais",
             "Aplico Behavior-Driven Development (Gherkin)",
-            "Garanto alinhamento entre usuário, negócio e tecnologia",
-            "Mantenho visão, escopo e roadmap sempre organizados"
+            "Alinho necessidades e capacidades técnicas",
+            "Mantenho visão e roadmap organizados"
           ]
         },
         {
@@ -896,35 +892,34 @@ const DATA: Record<Language, Content> = {
           title: "Eu moldo a estratégia de produto",
           desc: "Eu defino direção, priorizo valor e ajudo equipes a tomarem decisões melhores.",
           points: [
-            "Conduzo discovery, mapping, entrevistas e análise de oportunidades",
-            "Estruturo roadmaps, visão, KPIs e outcomes mensuráveis",
+            "Conduzo discovery e análise de oportunidades",
+            "Estruturo roadmaps e KPIs mensuráveis",
             "Alinho stakeholders em contextos complexos",
-            "Realizo benchmark e análise competitiva",
-            "Transformo problemas não estruturados em planos acionáveis"
+            "Realizo benchmark e análise de mercado",
+            "Transformo problemas em planos acionáveis"
           ]
         },
         {
           id: "delivery",
           title: "Eu lidero entrega e execução",
-          desc: "Eu garanto execução contínua e previsível em ambientes ágeis e multifuncionais.",
+          desc: "Eu garanto execução contínua e previsível em ambientes ágeis.",
           points: [
-            "Facilitating SCRUM ceremonies (planning, daily, reviews, retros)",
-            "Orchestro DEV, QA, UX e stakeholders para entregar com consistência",
-            "Gerencio releases (web + iOS + Android) e fluxo de publicação",
-            "Acompanho performance pós-lançamento e ajusto entregas",
-            "Equilibro velocidade, qualidade e dependências técnicas"
+            "Facilitito cerimônias SCRUM (planning, daily, reviews)",
+            "Orchestro DEV, QA, UX e stakeholders",
+            "Gerencio releases e fluxo de publicação",
+            "Acompanho performance pós-lançamento",
+            "Equilibro velocidade e qualidade técnica"
           ]
         },
         {
           id: "ux",
-          title: "Eu desenho e prototipo experiências",
+          title: "Eu desenho experiências",
           desc: "Eu dou forma às ideias criando experiências testáveis e centradas no usuário.",
           points: [
-            "Desenvolvo wireframes, fluxos e protótipos navegáveis",
-            "Testo e valido hipóteses rapidamente com usuários",
-            "Conduzo co-criação, UX research leve e iterações rápidas",
-            "Desenho experiências eficientes, acessíveis e cross-platform",
-            "Uso Figma, Framer, Webflow e Miro para acelerar ciclos"
+            "Desenvolvo wireframes e fluxos navegáveis",
+            "Testo e valido hipóteses com usuários",
+            "Desenho experiências acessíveis e cross-platform",
+            "Uso Figma e Framer para acelerar ciclos"
           ]
         }
       ]
@@ -938,9 +933,9 @@ const DATA: Record<Language, Content> = {
           company: "Eleven Labs",
           location: "Paris",
           description: [
-            "Gestão do backlog, redação de histórias de usuário e especificações funcionais, em coordenação com equipes SEO e marketing.",
-            "Preparação de releases de aplicativo móvel (iOS, Android), monitoramento de desempenho, gestão de entrada em produção.",
-            "Animação de cerimônias SCRUM, organização de demonstrações e materiais para facilitar a comunicação.",
+            "Gestão do backlog, redação de histórias de usuário e especificações funcionais em coordenação com as equipes de SEO e marketing.",
+            "Preparação de releases de aplicativos móveis (iOS, Android), monitoramento de performance e gestão de entrada em produção.",
+            "Animação de cerimônias SCRUM, organização de demos e materiais de comunicação.",
             "Apoio na melhoria contínua do produto, otimização de processos e documentação.",
             "Concepção de aplicações integrando IA."
           ],
@@ -952,12 +947,12 @@ const DATA: Record<Language, Content> = {
           company: "Akkodis",
           location: "Paris",
           description: [
-            "Pilotage de múltiplos projetos paralelos, do discovery ao delivery, para aplicações web, desktop (Windows/macOS) e mobile (iOS/Android).",
-            "Coordenação transversal de equipes DEV/QA/UX, sincronização de trabalhos e gestão de dependências para garantir entregas.",
-            "Workshops de co-criação e benchmark competitivo para enquadrar valor e alinhar stakeholders.",
-            "Concepção e validação de protótipos: wireframes/maquettes, testes de usuário focados e itérations rápidas.",
-            "Levantamento, formalização e desafio de requisitos; redação de especificações funcionais e user stories em BDD.",
-            "Framework ágil implementado: priorização de backlog por valor, sprints (planning, reviews, retros) e demonstrações regulares."
+            "Pilotagem de múltiplos projetos paralelos do discovery ao delivery (Web, Desktop, Mobile).",
+            "Coordenação transversal de equipes DEV/QA/UX e gestão de dependências para garantir as entregas.",
+            "Workshops de cocriação, benchmarks e story mapping para enquadrar o valor e alinhar stakeholders.",
+            "Concepção e validação de protótipos: wireframes/mockups, testes de usuário e iterações rápidas.",
+            "Levantamento, formalização e desafio de requisitos; redação de specs e user stories BDD.",
+            "Framework ágil implementado: priorização por valor, sprints e demos regulares."
           ],
           tech: ["Multiplataforma", "Discovery", "BDD"]
         },
@@ -967,25 +962,25 @@ const DATA: Record<Language, Content> = {
           company: "Actency",
           location: "Paris",
           description: [
-            "Gerente de Aplicações: Pilotagem de RUN multi-contas com priorização e acompanhamento orçamentário para garantir continuidade de serviço.",
-            "Planejamento de lotes e coordenação diária com equipes técnicas/design para garantir releases em produção.",
-            "Proxy PO: Interventions de pré-venda, enquadramento de produto e estruturação de backlogs iniciais.",
-            "Condução de story mapping, wireframing e pesquisa UX (entrevistas, insights) para alinhar produto-usuário."
+            "Application Manager: Pilotagem do RUN multi-contas com priorização e acompanhamento orçamentário para assegurar continuidade de serviço.",
+            "Planejamento de batches e coordenação diária com equipes de tech/design para assegurar releases de produção.",
+            "Proxy PO: Intervenções de pré-venda, escopo de produto e estruturação de backlogs iniciais.",
+            "Condução de story mapping, wireframing e pesquisa UX (entrevistas, insights) para alinhar necessidades produto-usuário."
           ],
-          tech: ["Consultoria", "Pesquisa UX", "Pré-venda"]
+          tech: ["Consultoria", "UX Research", "Pre-sales"]
         },
         {
           period: "Set 2018 - Jul 2019",
-          role: "Gerente de Projeto Digital Jr / PO",
+          role: "Gerente de Projeto Digital Junior / PO",
           company: "Catalina Marketing",
           location: "Boulogne-Billancourt",
           description: [
-            "Manutenção evolutiva e entrega de novas funcionalidades conforme roadmap do produto, garantindo continuidade de serviço.",
-            "Workshops de co-criação e benchmark competitivo para identificar oportunidades UX e priorizar melhorias de alto valor.",
-            "Concepção e validação de protótipos: wireframes/maquettes testados com stakeholders antes do desenvolvimento.",
-            "Gestão de backlog: redação de Epics e User Stories, priorização e coordenação diária com equipes técnicas (França/Offshore).",
-            "Garantia de qualidade: preparação e execução de testes de não-regressão e acompanhamento de correções até produção.",
-            "Documentação e comunicação: especificações funcionais, relatórios de sprint e demonstrações regulares."
+            "Manutenção evolutiva e entrega de novas funcionalidades conforme o roadmap, garantindo continuidade do serviço.",
+            "Workshops de cocriação e benchmarking competitivo para identificar oportunidades de UX e priorizar melhorias de alto valor.",
+            "Concepção e validação de protótipos: wireframes/mockups testados com stakeholders antes do desenvolvimento.",
+            "Gestão de backlog: redação de Epics e User Stories, priorização e coordenação diária com equipes tech (França/Offshore).",
+            "Garantia de Qualidade: preparação e execução de testes de não-regressão e acompanhamento de correções.",
+            "Documentação e Comunicação: especificações funcionais, relatórios de sprint e demos regulares."
           ],
           tech: ["Gestão Offshore", "UX Design", "QA"]
         },
@@ -995,15 +990,15 @@ const DATA: Record<Language, Content> = {
           company: "Valeo",
           location: "Saint Denis",
           description: [
-            "Pilotagem da reformulação do Tech’Assist (plataforma de suporte técnico Valeo), usando abordagem Design Thinking centrada no usuário.",
-            "Análise de necessidades e benchmark; enquadramento via carta de projeto, especificações funcionais e esquemas técnicos.",
+            "Pilotagem do redesign da Tech'Assist (plataforma de suporte técnico da Valeo) usando abordagem Design Thinking centrada no usuário.",
+            "Análise de necessidades de negócio e benchmark; escopo via carta de projeto, specs funcionais e esquemas técnicos.",
             "Transformação de requisitos em backlog estruturado (Epics, Features, User Stories) com priorização e acompanhamento.",
-            "Criação de dashboards de pilotagem e desempenho no Google Data Studio.",
-            "Otimização do tratamento de incidentes nos sites Valeo Service, com formalização de procedimentos.",
-            "Concepção e implantação de exportação documental XML para acelerar migração da plataforma XWiki para Drupal.",
-            "Garantia de qualidade: testes de não-regressão, treinamentos internos e evangelização do Back Office."
+            "Configuração de dashboards de pilotagem e performance no Google Data Studio.",
+            "Otimização do processamento de incidentes para sites Valeo Service, com documentação formal de procedimentos.",
+            "Design e implantação de um mecanismo de exportação documental XML para acelerar migração de XWiki para Drupal.",
+            "Garantia de Qualidade: preparação/execução de testes de não-regressão, treinamento interno e evangelização de Back Office."
           ],
-          tech: ["Design Thinking", "Data Studio", "Migração"]
+          tech: ["Design Thinking", "Data Studio", "Migration"]
         }
       ]
     },
@@ -1012,79 +1007,79 @@ const DATA: Record<Language, Content> = {
       intro: "Projetos selecionados destacando visão estratégica e excelência na entrega.",
       client_label: "Cliente",
       labels: {
-        challenge: "Contexto / Desafio",
+        challenge: "Context / Desafio",
         solution: "Solução / Intervenção",
-        impact: "Impact"
+        impact: "Impacto"
       },
       items: [
         {
           name: "DERi",
           client: "Université Paul Sabatier",
-          role: "Product Owner (2022-2024)",
+          role: "Product Owner",
           type: "P&D / Acessibilidade",
-          summary: "Solução completa para criação e consumo de conteúdos educativos táteis e sonoros, composta por um editor desktop e um app mobile orientado a estudantes cegos. O projeto exigiu estrutura funcional robusta, regras avançadas de interação e uma estratégia ágil capaz de organizar um ecossistema totalmente novo.",
-          challenge: "Pesquisadores da Universidade Paul Sabatier buscavam modernizar o acesso ao aprendizado para pessoas com deficiência visual. A limitação do material braile, a escassez de exemplares e a falta de recursos digitais acessíveis criavam barreiras profundas no contexto educacional. Era necessário conceber duas aplicações interligadas — uma para criação de interações multimodais (tátil, relevo, gesto e áudio) e outra para permitir sua exploração pelos estudantes — mantendo coerência, acessibilidade e rigor funcional.",
-          solution: "A atuação envolveu estruturar todo o funcionamento do ecossistema, conduzindo entrevistas, definindo o escopo e instalando um framework ágil completo com workflows, maturidade funcional e regras de criticidade. Foram modeladas jornadas complexas, story mapping e roadmap, além da criação de todas as regras de interação tátil e sonora. O backlog foi redigido integralmente em BDD/Gherkin para garantir precisão técnica e evitar perda de contexto. A documentação foi adaptada para ferramentas de leitura de tela, facilitando o envolvimento de usuários cegos. Com a saída do designer, a concepção das interfaces também foi assumida — garantindo continuidade, consistência e capacidade de validação junto à equipe técnica, pesquisadores e especialistas em acessibilidade.",
+          summary: "Solução completa para criação e consumo de conteúdos educativos táteis e sonoros para estudantes cegos. O projeto exigia uma estrutura funcional robusta, regras de interação avançadas e uma estratégia ágil capaz de organizar um ecossistema inteiramente novo.",
+          challenge: "Pesquisadores da Universidade Paul Sabatier buscavam modernizar o acesso ao aprendizado para pessoas com deficiência visual. A limitação do material braille, a escassez de exemplares e a falta de recursos digitais acessíveis criavam barreiras profundas. Era necessário projetar duas aplicações interconectadas — uma para criação de interações multimodais (tátil, relevo, gesto e áudio) e outra para permitir sua exploração pelos estudantes — mantendo coerência, acessibilidade e rigor funcional.",
+          solution: "A intervenção envolveu estruturar todo o funcionamento do ecossistema, conduzindo entrevistas, definindo o escopo e instalando um framework ágil completo com fluxos de trabalho e regras de criticidade. Percursos complexos, story mapping e roadmap foram modelados, bem como a criação de todas as regras de interação tátil e sonora. O backlog foi redigido integralmente em BDD/Gherkin para garantir precisão técnica. A documentação foi adaptada para leitores de tela. Com a saída do designer, assumi a concepção das interfaces — garantindo continuidade e validação junto à equipe técnica e pesquisadores.",
           impact: [
              "Ecossistema funcional completo: especificações detalhadas para editor desktop e app mobile.",
-             "Framework ágil implementado: workflows, DoR, story mapping e roadmap operacional.",
+             "Framework ágil implementado: fluxos, DoR, story mapping e roadmap operacional.",
              "Backlog estruturado em BDD, eliminando ambiguidade e reduzindo retrabalho.",
-             "Interfaces concebidas e entregues sem designer, mantendo coerência visual e funcional.",
-             "Sprints mais previsíveis, com alinhamento forte entre UX, acessibilidade e desenvolvimento.",
+             "Interfaces concebidas e entregues sem designer dedicado, mantendo consistência visual e funcional.",
+             "Sprints mais previsíveis, com forte alinhamento entre UX, acessibilidade e desenvolvimento.",
              "Processo de colaboração simplificado, inclusive para usuários cegos e pesquisadores técnicos."
           ],
-          tags: ["FunctionalDesign", "Accessibility", "ProductDiscovery", "UXThinking", "AgileFrameworks", "BacklogStrategy", "BDD", "Prototyping"]
+          tags: ["FunctionalDesign", "Accessibility", "ProductDiscovery", "UXThinking", "AgileFrameworks", "BDD", "Prototyping"]
         },
         {
           name: "CASP",
           client: "LHH",
-          role: "Proxy PO (2021-2022)",
+          role: "Proxy PO",
           type: "Plataforma SaaS B2B",
-          summary: "Portal integrado para empregados, consultores e supervisores, criado para estruturar e centralizar todo o processo de transição profissional após desligamentos econômicos. O projeto exigiu clareza funcional, modelagem de jornadas complexas e uma organização ágil capaz de dar vida a interações críticas entre múltiplos perfis.",
-          challenge: "A LHH precisava modernizar a gestão de processos de desligamento econômico, tradicionalmente conduzidos por telefone, e-mails e visitas presenciais. Faltava uma plataforma única que permitisse aos empregados acessar informações, enviar documentos, contactar consultores e marcar reuniões — enquanto consultores e supervisores necessitavam de ferramentas para pilotar cada caso. O desafio incluía múltiplos perfis, alfabetização digital limitada e forte pressão por clareza e previsibilidade.",
-          solution: "A intervenção envolveu a análise profunda do processo existente e a estruturação dos três fluxos principais (empregado, consultor e supervisor). Foram conduzidas entrevistas, mapeamento de jornadas, story mapping e definição de requisitos funcionais para toda a cadeia. O framework ágil foi instalado do zero, garantindo previsibilidade e uma gestão clara do backlog. Com a saída inesperada do designer, todo o design funcional e os workshops de concepção foram assumidos diretamente, permitindo alinhar visão técnica, regras de negócio e UX em paralelo. O trabalho incluiu também evangelização dos stakeholders, com formações específicas para explicar o funcionamento do projeto, limites, responsabilidades e dinâmica das sprints.",
+          summary: "Portal integrado para empregados, consultores e supervisores, criado para estruturar e centralizar todo o processo de transição profissional após demissões econômicas. O projeto exigia clareza funcional, modelagem de percursos complexos e uma organização ágil capaz de dar vida a interações críticas entre múltiplos perfis.",
+          challenge: "A LHH precisava modernizar a gestão dos processos de demissão econômica, tradicionalmente realizados por telefone, e-mails e visitas. Faltava uma plataforma única que permitisse aos funcionários acessar informações, enviar documentos ou contatar consultores. O desafio incluía múltiplos perfis, letramento digital limitado e forte pressão por clareza e previsibilidade.",
+          solution: "A intervenção envolveu a análise profunda do processo existente e a estruturação dos três fluxos principais (empregado, consultor, supervisor). Foram conduzidas entrevistas, mapeamento de jornadas, story mapping e definição de requisitos funcionais. O framework ágil foi instalado do zero. Com a saída inesperada do designer, todo o design funcional e workshops de concepção foram assumidos diretamente, permitindo alinhar visão técnica, regras de negócio e UX. O trabalho também incluiu a evangelização dos stakeholders com treinamentos específicos.",
           impact: [
              "Modelo funcional completo para três perfis (empregado, consultor, supervisor).",
              "Backlog claro e priorizado, permitindo previsibilidade e desenvolvimento contínuo.",
              "Interface redesenhada após saída do designer, garantindo continuidade sem perda de ritmo.",
              "Story mapping e jornadas estruturadas, permitindo decisões mais rápidas e assertivas.",
-             "Stakeholders alinhados, graças à formação e à pedagogia aplicada ao processo.",
-             "Projeto estabilizado, evitando risco de cancelamento e assegurando entrega consistente."
+             "Stakeholders alinhados, graças ao treinamento e pedagogia aplicada.",
+             "Projeto estabilizado, evitando risco de cancelamento e garantindo entrega constante."
           ],
           tags: ["FunctionalDesign", "AgileFrameworks", "ProductDiscovery", "UXThinking", "BacklogStrategy", "ServiceDesign", "ProcessMapping", "Prototyping"]
         },
         {
           name: "Coupon Network",
-          client: "Catalina",
-          role: "Product Owner (2018-2019)",
-          type: "App Mobile & Web B2C",
-          summary: "Evolução contínua do aplicativo e do site de cashback da Catalina, com foco em melhorar engajamento, usabilidade e performance das campanhas. Inclui criação de um módulo de sorteios que transformou a participação dos usuários e elevou a eficiência das ativações.",
-          challenge: "O aplicativo da Coupon Network já possuía grande base de usuários, mas as ações promocionais tinham baixa visibilidade e os sorteios eram conduzidos de forma desconexa: usuários eram selecionados sem nunca ter percebido que estavam participando. Isso gerava desperdício de oportunidade, baixa qualificação da base e reclamações recorrentes. O desafio era criar uma experiência clara, visual, motivadora e operacionalmente eficiente.",
-          solution: "A atuação começou com diagnóstico do problema, análise de dados, entrevistas internas e revisão de práticas de engajamento. Foram conduzidos workshops de ideação e, posteriormente, uma sessão de co-construção de wireframes ao vivo — uma abordagem incomum e extremamente eficaz para alinhar equipes de marketing, stakeholders e tecnologia. O módulo foi concebido end-to-end: hipóteses, benchmark, protótipo, definições funcionais, critérios de elegibilidade, lógica de tickets e fluxos de participação. Após validação, todo o desenvolvimento foi acompanhado até a entrega, com testes, ajustes e análise de impacto pós-lançamento.",
+          client: "CATALINA",
+          role: "Product Owner",
+          type: "APP MOBILE & WEB B2C",
+          summary: "Evolução contínua do aplicativo e site de cashback da Catalina, com foco na melhoria do engajamento, usabilidade e performance das campanhas. Inclui a criação de um módulo de sorteios que transformou a participação dos usuários e elevou a eficiência das ativações.",
+          challenge: "O aplicativo Coupon Network tinha uma grande base de usuários, mas as ações promocionais tinham baixa visibilidade e os sorteios eram realizados de forma desconectada: os usuários eram selecionados sem saber que participavam. Isso gerava desperdício de oportunidade e reclamações. O desafio era criar uma experiência clara, visual, motivadora e operacionalmente eficiente.",
+          solution: "A ação começou com um diagnóstico, análise de dados e entrevistas. Foram conduzidos workshops de ideação e uma sessão de co-construção de wireframes ao vivo — uma abordagem eficaz para alinhar marketing, stakeholders e tech. O módulo foi projetado de ponta a ponta: hipóteses, benchmark, protótipo, definições funcionais, critérios de elegibilidade, lógica de tickets e fluxo de participação. O desenvolvimento foi acompanhado até a entrega e análise de impacto.",
           impact: [
-             "Novo módulo de sorteios integrado ao app e ao site, com participação explícita do usuário.",
+             "Novo módulo de sorteios integrado ao app e site, com participação explícita.",
              "Experiência gamificada, com critérios claros de elegibilidade (ex.: validar cupons).",
-             "Base mais qualificada, com participantes plenamente conscientes da campanha.",
-             "Redução do custo de conversão, com melhora expressiva na performance das ativações.",
+             "Base mas qualificada, com participantes plenamente conscientes da campanha.",
+             "Redução do custo de conversão, com melhora expressiva na performance.",
              "Fluxo de engajamento estabilizado, reduzindo ambiguidades e reclamações.",
-             "Integração fluida com marketing, facilitantdo novas campanhas e A/B tests."
+             "Integração fluida com marketing, facilitando novas campanhas e testes A/B."
           ],
           tags: ["ProductDiscovery", "FunctionalDesign", "UXIdeation", "Prototyping", "EngagementDesign", "DataInformedDecisions", "BacklogDelivery", "MobileProduct"]
         },
         {
           name: "Tech'Assist",
-          client: "Valeo",
-          role: "PO / Gerente de Projeto (2016-2018)",
-          type: "Ferramenta Interna / Dados",
-          summary: "Redefinição completa da ferramenta global de assistência técnica da Valeo, responsável por sustentar operações em dezenas de países. O projeto exigiu concepção funcional em grande escala, documentação técnica robusta e padronização internacional de fluxos e dados.",
-          challenge: "O TechAssist era uma ferramenta estratégica usada por milhares de técnicos e oficinas no mundo inteiro, mas sofria com tecnologia obsoleta, usabilidade fraca e estrutura funcional criada originalmente por engenheiros — distante das necessidades reais do usuário final. A Valeo precisava renovar todo o sistema, incluindo arquitetura funcional, conteúdo técnico, navegação e mecanismos de exportação para diferentes mercados e idiomas.",
-          solution: "Foram conduzidos estudos de benchmark, análise profunda do uso atual, identificação de falhas críticas e estruturação completa da nova versão funcional. Mais de 90 páginas de especificações foram produzidas, incluindo schémas techniques, fluxos detalhados, regras de documentação, comportamentos de interface e padrões de navegação. A gestão multi-idioma e multi-instância (até 16 ambientes) foi organizada com processos reprodutíveis. A intervenção incluiu ainda o desenho e implementação do mecanismo de exportação XML, essencial para alimentar mercados locais. Todo o material foi transformado posteriormente em backlog estruturado, permitindo um ciclo de desenvolvimento mais previsível e ágil.",
+          client: "VALEO",
+          role: "PO / Chef de Projeto",
+          type: "FERRAMENTA INTERNA / DATA",
+          summary: "Redefinição completa da ferramenta mundial de assistência técnica da Valeo, responsável por apoiar operações em dezenas de países. O projeto exigia uma concepção funcional em grande escala, documentação técnica robusta e padronização internacional de fluxos e dados.",
+          challenge: "TechAssist era uma ferramenta estratégica usada por milhares de técnicos, mas sofria com tecnologia obsoleta, usabilidade fraca e estrutura centrada em engenharia — longe das necessidades reais. A Valeo precisava renovar todo o sistema, incluindo arquitetura funcional, conteúdo técnico, navegação e mecanismos de exportação para diferentes mercados e idiomas.",
+          solution: "Foram realizados estudos de benchmark e uma análise profunda de uso para identificar falhas críticas e estruturar a nova versão. Mais de 90 páginas de especificações foram produzidas, incluindo esquemas técnicos, fluxos detalhados, regras de documentação e modelos de navigation. A gestão multi-idioma e multi-instância foi organizada. A intervenção incluiu o desenho e implementação do mecanismo de exportação XML, essencial para alimentar os mercados locais.",
           impact: [
              "Base funcional completa, substituindo a versão antiga por uma arquitetura clara e escalável.",
-             "Documentação robuste (+90 páginas) para sustentar equipe técnica e internacionalização.",
-             "Processus de exportação XML implementado e padronizado para múltiplos mercados.",
+             "Documentação robusta (+90 páginas) para apoiar a equipe técnica e a internacionalização.",
+             "Processo de exportação XML implementado e padronizado para múltiplos mercados.",
              "Backlog estruturado, com epics, features e US prontas para desenvolvimento.",
-             "Melhor usabilidade e conscistência, corrigeindo problemas históricos do produto.",
+             "Melhor usabilidade e consistência, corrigindo problemas históricos.",
              "Redução de dependência técnica, graças a padrões e processos reutilizáveis."
           ],
           tags: ["FunctionalDesign", "TechnicalDocumentation", "ProcessEngineering", "BacklogDefinition", "Globalization", "XMLIntegration", "ProductDelivery", "UXStructure"]
@@ -1100,43 +1095,43 @@ const DATA: Record<Language, Content> = {
       title: "Formação & Certificações",
       academic: [
         {
-          degree: "Desenvolvedor No-code & Automações IA (Agentic AI)",
+          degree: "No-code Developer & AI Automations (Agentic AI)",
           school: "No-Code StartUp",
           year: "2025 - 2026",
-          desc: "Capacitar para criar automações e agentes de IA em ambiente no-code.",
-          details: ["workflow automation", "AI agents design", "API integration", "no-code systems", "rapid prototyping", "data structuring for automation"],
+          desc: "Capacitar para criar automações e agentes de IA em um ambiente no-code.",
+          details: ["automação de workflows", "design de agentes IA", "integração de APIs", "sistemas no-code", "prototipagem rápida", "estruturação de dados para automação"],
           domain: "nocodestartup.io"
         },
         {
-          degree: "Consultor Técnico Funcional CRM Salesforce",
+          degree: "Consultor CRM Salesforce",
           school: "FITEC",
           year: "2020",
-          desc: "Formar consultores funcionais Salesforce para configuração e suporte ao CRM.",
-          details: ["sales process modeling", "object configuration", "flow automation", "CRM integration", "reporting", "functional consulting"],
-          domain: "salesforce.com"
-        },
-        {
-          degree: "Master em Gestão de Sistemas de Informação e Digital",
-          school: "Grenoble Ecole de Management",
-          year: "2017 - 2019",
-          desc: "Capacitar para gerir sistemas de informação e projetos digitais estratégicos.",
-          details: ["digital strategy", "IT governance", "systems architecture", "project management", "data-driven decision making", "transformation frameworks"],
-          domain: "grenoble-em.com"
+          desc: "Treinar consultores Salesforce funcionais para configuração e suporte CRM.",
+          details: ["modelagem de processos de vendas", "configuração de objetos", "automação de fluxos", "integração CRM", "relatórios", "consultoria funcional"],
+          domain: "fitec.fr"
         },
         {
           degree: "Especialização em Gestão da Inovação",
           school: "HEC Paris",
           year: "2019",
-          desc: "Desenvolver competências para liderar inovação corporativa.",
-          details: ["innovation strategy", "design thinking", "MVP creation", "prototyping methods", "opportunity assessment", "market analysis"],
+          desc: "Desenvolver competências para liderar a inovação corporativa.",
+          details: ["estratégia de inovação", "design thinking", "criação de MVP", "métodos de prototipagem", "avaliação de oportunidades", "análise de mercado"],
           domain: "hec.edu"
         },
         {
-          degree: "Bachelor em Webdesign UX/UI",
+          degree: "Mestrado em Sistemas de Informação & Gestão Digital",
+          school: "Grenoble Ecole de Management",
+          year: "2017 - 2019",
+          desc: "Habilitar para gerir sistemas de informação e projetos digitais estratégicos.",
+          details: ["estratégia digital", "governança de TI", "arquitetura de sistemas", "gestão de projetos", "tomada de decisão baseada em dados", "frameworks de transformação"],
+          domain: "grenoble-em.com"
+        },
+        {
+          degree: "Bacharelado em Webdesign UX/UI",
           school: "Supdeweb Paris",
           year: "2016 - 2017",
-          desc: "Formar profissionais em UX/UI para web e mobile.",
-          details: ["interface design", "wireframing", "user flows", "visual systems", "prototyping", "usability principles", "responsive design"],
+          desc: "Formar profissionais de UX/UI para web e mobile.",
+          details: ["design de interface", "wireframing", "fluxos de usuário", "sistemas visuais", "prototipagem", "princípios de usabilidade", "design responsivo"],
           domain: "supdeweb.com"
         }
       ],
@@ -1145,25 +1140,25 @@ const DATA: Record<Language, Content> = {
           name: "AI Product Manager", 
           issuer: "IBM Professional Certification", 
           year: "2025", 
-          desc: "Certificar profissionais na gestão estratégica de produtos com IA.",
-          details: ["AI product strategy", "ML fundamentals", "evaluation metrics", "AI governance", "ethical considerations", "roadmap definition"],
+          desc: "Certificação estratégica em gestão de produtos com IA.",
+          details: ["estratégia de produto IA", "fundamentos de ML", "métricas de avaliação", "governança de IA", "considerações éticas", "definição de roadmap"],
           domain: "ibm.com" 
         },
         { 
           name: "Professional Scrum Product Owner (PSPO)", 
           issuer: "Scrum.org", 
           year: "2020", 
-          desc: "Validar domínio do papel de Product Owner no framework Scrum.",
-          details: ["backlog management", "value definition", "user stories", "sprint planning", "stakeholder alignment", "product metrics"],
+          desc: "Validar o domínio do papel de Product Owner no framework Scrum.",
+          details: ["gestão de backlog", "definição de valor", "user stories", "planamento de sprint", "alinhamento de stakeholders", "métricas de produto"],
           domain: "scrum.org" 
         },
-        { 
-          name: "Salesforce Administrator", 
-          issuer: "Salesforce", 
-          year: "2020", 
+        {
+          name: "Administrador Salesforce",
+          issuer: "Salesforce",
+          year: "2020",
           desc: "Qualificar administradores para configurar e manter ambientes Salesforce.",
-          details: ["user and security model", "automation (Flows)", "objects & fields", "dashboards & reports", "platform configuration", "process optimization"],
-          domain: "salesforce.com" 
+          details: ["modelo de usuário e segurança", "automação (Flows)", "objetos e campos", "dashboards e relatórios", "configuração de plataforma", "otimização de processos"],
+          domain: "salesforce.com"
         }
       ]
     },
@@ -1173,28 +1168,23 @@ const DATA: Record<Language, Content> = {
         {
           name: "IA & Automação",
           icon: Zap,
-          items: ["Integração LLM", "Engenharia de Prompt", "Embeddings & Vector DB", "Workflows n8n", "Orquestração de IA Agêntica", "APIs OpenAI / Gemini", "Automação No-code / Low-code", "Funções Supabase & Webhooks"]
+          items: ["Integração LLM", "Engenharia de Prompt", "n8n"]
         },
         {
-          name: "Fundamentos de Produto",
+          name: "Produto",
           icon: Layers,
-          items: ["Product Discovery", "Entrega Ágil", "SCRUM", "Roadmapping", "User Stories & Specs Funcionais", "Estratégia de Backlog & Priorização", "Story Mapping", "Behavior Driven Development", "Gherkin", "Ferramentas de Design de Serviço"]
+          items: ["Discovery", "Agile", "SCRUM", "User Stories", "BDD"]
         },
         {
-          name: "Design & Prototipagem",
+          name: "Design & Técnico",
           icon: PenTool,
-          items: ["Figma", "Adobe XD", "Miro", "Framer", "Webflow", "Wireframing", "Prototipagem Rápida", "Mapeamento de Interação", "Arquitetura de Interface"]
-        },
-        {
-          name: "Técnico",
-          icon: Code,
-          items: ["HTML/CSS", "Bancos de Dados (MySQL, Supabase, pgvector)", "XML/JSON", "Consumo de API & Webhooks", "Analytics (GA, Looker Studio)", "Modelagem de Dados (básica)"]
+          items: ["Figma", "Webflow", "HTML/CSS", "Bancos de Dados", "APIs"]
         }
       ]
     },
     contact: {
       title: "Vamos Conversar",
-      text: "Estou aberto a novas oportunidades e conversas. Se você quiser se conectar ou discutir um projeto, fique à vontade para entrar em contato — retornarei em breve.",
+      text: "Se você quiser se conectar ou discutir um projeto, fique à vontade para entrar em contato — retornarei em breve.",
       cta_email: "Enviar Email",
       cta_linkedin: "Perfil LinkedIn",
       cta_phone: "Me Ligar"
@@ -1224,7 +1214,6 @@ const LanguageSwitcher = ({ current, setLang }: { current: Language; setLang: (l
   );
 };
 
-// Replaces static focus with Glitch Text effect using data-text attribute
 const GlitchText = ({ text, className = "", as: Component = "span" }: { text: string, className?: string, as?: any }) => {
   return (
     <Component 
@@ -1249,244 +1238,46 @@ const SectionHeading: React.FC<{ children?: string }> = ({ children }) => (
   </div>
 );
 
-// EXPERIMENTATION VAULT - SECURE HUD CONCEPT (CYBER-BLUE REVISION)
 const ExperimentationVault: React.FC<{ t: Content['experimentations'] }> = ({ t }) => {
   return (
     <div className="relative w-full h-[400px] border border-cyber-blue/30 bg-cyber-blue/5 overflow-hidden flex flex-col items-center justify-center group/vault">
-        {/* Warning Stripes Background */}
         <div className="absolute inset-0 bg-warning-stripes opacity-30 pointer-events-none"></div>
-        
-        {/* Terminal Header Bar */}
         <div className="absolute top-0 left-0 w-full h-8 bg-cyber-blue/10 border-b border-cyber-blue/30 flex items-center px-4 justify-between">
            <div className="flex items-center gap-2">
               <Terminal size={14} className="text-cyber-blue animate-pulse" />
               <span className="font-mono text-[10px] text-cyber-blue tracking-widest">VAULT_V1.0</span>
            </div>
-           <div className="flex gap-1">
-              <span className="w-2 h-2 rounded-full bg-cyber-blue/50"></span>
-              <span className="w-2 h-2 rounded-full bg-cyber-blue/30"></span>
-           </div>
         </div>
-
-        {/* Vertical Scanner Laser - Blue */}
         <div className="absolute left-0 w-full h-[2px] bg-cyber-blue/50 shadow-[0_0_15px_#3b82f6] animate-scan-vertical pointer-events-none z-10"></div>
-        
-        {/* HUD Overlay Text */}
-        <div className="absolute top-12 left-4 font-mono text-xs text-cyber-blue/70 flex flex-col gap-1">
-           <span className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 bg-cyber-blue rounded-full animate-ping"></span>
-              SECURE_CONNECTION: ESTABLISHED
-           </span>
-           <span className="animate-glitch-flicker">ENCRYPTION: AES-256-GCM</span>
-           <span className="opacity-50">SYSTEM_ID: #8X-99</span>
-        </div>
-        
-        {/* Status Warning */}
-        <div className="absolute bottom-4 right-4 font-mono text-xs text-cyber-magenta/70 flex items-center gap-2 animate-pulse">
-           <AlertOctagon size={12} />
-           <span>ACCESS_LEVEL: RESTRICTED</span>
-        </div>
-
-        {/* Central Element */}
-        <div className="z-20 text-center space-y-4 relative p-12 border border-cyber-blue/20 bg-black/80 backdrop-blur-md rounded-sm cyber-glitch-box-blue hover:border-cyber-blue/50 transition-colors duration-300 shadow-[0_0_20px_rgba(59,130,246,0.1)]">
-           {/* Icon */}
-           <div className="flex justify-center mb-4 relative">
-              <div className="relative">
-                 <TestTube size={48} className="text-cyber-blue opacity-90 relative z-10" />
-                 {/* Floating Particles */}
-                 <div className="absolute -top-4 -right-4 w-1 h-1 bg-cyber-blue rounded-full animate-ping"></div>
-                 <div className="absolute bottom-0 -left-2 w-1 h-1 bg-white rounded-full animate-pulse"></div>
-              </div>
-              <Lock size={16} className="absolute -bottom-1 -right-1 text-cyber-magenta animate-bounce" />
+        <div className="z-20 text-center space-y-4 relative p-12 border border-cyber-blue/20 bg-black/80 backdrop-blur-md rounded-sm cyber-glitch-box-blue hover:border-cyber-blue/50 transition-colors duration-300">
+           <div className="flex justify-center mb-4">
+              <TestTube size={48} className="text-cyber-blue opacity-90" />
            </div>
-
-           {/* Text */}
            <div className="space-y-2">
              <h3 className="text-2xl font-bold font-mono tracking-widest text-white group-hover/vault:text-cyber-blue transition-colors">
-               {/* Fixed Lab title inside vault */}
                {t.subtitle} 
              </h3>
-             <p className="font-mono text-xs text-cyber-blue tracking-[0.2em] uppercase bg-cyber-blue/10 py-1 px-2 rounded-sm inline-block">
-               {/* Fixed Restricted Area subtitle inside vault */}
-               RESTRICTED AREA
-             </p>
-             <p className="font-mono text-sm text-gray-200 mt-4 max-w-sm mx-auto border-t border-cyber-blue/20 pt-4">
+             <p className="font-mono text-sm text-gray-200 mt-4 max-w-sm mx-auto">
                {t.message}
              </p>
-             
-             {/* Blinking Standby Light */}
-             <div className="mt-4 flex justify-center items-center gap-2">
-                <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse shadow-[0_0_5px_red]"></div>
-                <span className="text-[10px] font-mono text-red-500/80 tracking-widest">SYSTEM STANDBY</span>
-             </div>
            </div>
-           
-           {/* Interaction Glitch Overlay */}
-           <div className="absolute inset-0 bg-cyber-blue/5 opacity-0 group-hover/vault:opacity-100 group-hover/vault:animate-pulse pointer-events-none"></div>
-        </div>
-
-        {/* Blinking Corner Brackets - Blue */}
-        <div className="absolute top-10 left-4 w-8 h-8 border-l-2 border-t-2 border-cyber-blue/40 rounded-tl-lg animate-pulse"></div>
-        <div className="absolute top-10 right-4 w-8 h-8 border-r-2 border-t-2 border-cyber-blue/40 rounded-tr-lg animate-pulse" style={{ animationDelay: '0.5s' }}></div>
-        <div className="absolute bottom-4 left-4 w-8 h-8 border-l-2 border-b-2 border-cyber-blue/40 rounded-bl-lg animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute bottom-4 right-4 w-8 h-8 border-r-2 border-b-2 border-cyber-blue/40 rounded-br-lg animate-pulse" style={{ animationDelay: '1.5s' }}></div>
-        
-        {/* Binary Rain Decoration */}
-        <div className="absolute top-1/2 left-10 font-mono text-[10px] text-cyber-blue/20 flex flex-col leading-none select-none pointer-events-none">
-           <span className="animate-glitch-flicker">10110</span>
-           <span className="animate-glitch-flicker" style={{ animationDelay: '0.2s' }}>01001</span>
-           <span className="animate-glitch-flicker" style={{ animationDelay: '0.4s' }}>11100</span>
-        </div>
-        <div className="absolute top-1/2 right-10 font-mono text-[10px] text-cyber-blue/20 flex flex-col leading-none select-none pointer-events-none text-right">
-           <span className="animate-glitch-flicker" style={{ animationDelay: '0.1s' }}>00101</span>
-           <span className="animate-glitch-flicker" style={{ animationDelay: '0.3s' }}>11010</span>
-           <span className="animate-glitch-flicker" style={{ animationDelay: '0.5s' }}>01111</span>
         </div>
     </div>
   );
 };
 
-// Advanced Service Card with Unique Identities
 const ServiceCard: React.FC<{ title: string; desc: string; items: string[]; iconId: string }> = ({ title, desc, items, iconId }) => {
   const [hovered, setHovered] = useState(false);
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const cardRef = useRef<HTMLDivElement>(null);
-  const [typedTitle, setTypedTitle] = useState("");
 
-  useEffect(() => {
-    if (iconId === 'po' && hovered) {
-      // Typewriter Effect for PO
-      let i = 0;
-      setTypedTitle("");
-      const interval = setInterval(() => {
-        if (i < title.length) {
-          setTypedTitle(title.substring(0, i + 1));
-          i++;
-        } else {
-          clearInterval(interval);
-        }
-      }, 30);
-      return () => clearInterval(interval);
-    } else {
-       setTypedTitle(title);
-    }
-  }, [hovered, title, iconId]);
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (!cardRef.current) return;
-    const rect = cardRef.current.getBoundingClientRect();
-    setMousePos({
-      x: e.clientX - rect.left,
-      y: e.clientY - rect.top,
-    });
-  };
-
-  // Render Visuals based on Identity
   const getVisualIdentity = () => {
     switch(iconId) {
-      case 'automation': // Brain / Neural
-        return {
-           icon: <Bot size={32} className="text-cyber-magenta animate-pulse" />,
-           borderColor: 'hover:border-cyber-magenta/80',
-           glowColor: 'group-hover/service:shadow-[0_0_30px_rgba(255,0,255,0.15)]',
-           bgPattern: 'bg-neural-dots-magenta',
-           bgOpacity: 'opacity-20', // Reduced opacity as requested
-           accent: 'bg-cyber-magenta',
-           extra: hovered && (
-             <>
-                {/* Proximity Glow */}
-                <div 
-                  className="absolute w-64 h-64 bg-cyber-magenta/10 rounded-full blur-3xl pointer-events-none transition-opacity duration-300"
-                  style={{ top: mousePos.y - 128, left: mousePos.x - 128 }}
-                ></div>
-                {/* Data Stream Border */}
-                <div className="absolute inset-0 border border-cyber-magenta/50 opacity-50 animate-border-flow pointer-events-none"></div>
-                {/* Glitch Entry */}
-                <div className="absolute inset-0 bg-cyber-magenta/5 animate-ai-render pointer-events-none mix-blend-overlay"></div>
-             </>
-           )
-        };
-      case 'po': // Structure / Blocks
-        return {
-           icon: <KanbanSquare size={32} className="text-cyber-yellow" />,
-           borderColor: 'hover:border-cyber-yellow/80',
-           glowColor: 'group-hover/service:shadow-[0_0_30px_rgba(250,204,21,0.15)]',
-           bgPattern: 'bg-circuit', // NEW: Circuit Pattern
-           bgOpacity: 'opacity-30',
-           accent: 'bg-cyber-yellow',
-           titleOverride: <span className="font-mono">{typedTitle}<span className="animate-pulse">_</span></span>,
-           extra: hovered && (
-              <div className="absolute bottom-0 left-0 w-full h-1 bg-cyber-yellow animate-slide-up-fade"></div>
-           )
-        };
-      case 'pm': // Strategy / Radar
-        return {
-           icon: <Compass size={32} className={`text-cyber-orange ${hovered ? 'animate-spin' : ''}`} style={{ animationDuration: '3s' }} />,
-           borderColor: 'hover:border-cyber-orange/80',
-           glowColor: 'group-hover/service:shadow-[0_0_30px_rgba(251,146,60,0.15)]',
-           bgPattern: 'bg-hex', // NEW: Hex Pattern
-           bgOpacity: 'opacity-30',
-           accent: 'bg-cyber-orange',
-           extra: hovered && (
-             <>
-               {/* Radar Scan */}
-               <div className="absolute top-0 left-0 w-full h-[2px] bg-cyber-orange/50 shadow-[0_0_10px_#fb923c] animate-scan-line pointer-events-none"></div>
-               <div className="absolute top-4 right-4 text-cyber-orange text-[10px] font-mono animate-pulse">TARGET_LOCKED</div>
-             </>
-           )
-        };
-      case 'delivery': // Engine / Speed
-        return {
-           icon: <Rocket size={32} className={`text-cyber-blue ${hovered ? 'animate-shake-tiny' : ''}`} />,
-           borderColor: 'hover:border-cyber-blue/80',
-           glowColor: 'group-hover/service:shadow-[0_0_30px_rgba(59,130,246,0.15)]',
-           bgPattern: 'bg-speed', // NEW: Speed Lines
-           bgOpacity: 'opacity-30',
-           accent: 'bg-cyber-blue',
-           extra: hovered && (
-              <>
-                {/* Snake Border Animation */}
-                <span className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-cyber-blue to-transparent animate-snake-1 shadow-[0_0_8px_#3b82f6]"></span>
-                <span className="absolute top-0 right-0 w-[3px] h-full bg-gradient-to-b from-transparent via-cyber-blue to-transparent animate-snake-2 shadow-[0_0_8px_#3b82f6]"></span>
-                <span className="absolute bottom-0 right-0 w-full h-[3px] bg-gradient-to-l from-transparent via-cyber-blue to-transparent animate-snake-3 shadow-[0_0_8px_#3b82f6]"></span>
-                <span className="absolute bottom-0 left-0 w-[3px] h-full bg-gradient-to-t from-transparent via-cyber-blue to-transparent animate-snake-4 shadow-[0_0_8px_#3b82f6]"></span>
-              </>
-           )
-        };
-      case 'ux': // Design / Pen
-        return {
-           icon: <PenTool size={32} className="text-cyber-pink" />,
-           borderColor: 'hover:border-cyber-pink/80',
-           glowColor: 'group-hover/service:shadow-[0_0_30px_rgba(236,72,153,0.15)]',
-           bgPattern: 'bg-isometric', // NEW: Isometric Grid
-           bgOpacity: 'opacity-30',
-           accent: 'bg-cyber-pink',
-           extra: hovered && (
-             <>
-                {/* Mouse Trail Grid Highlight */}
-                <div 
-                  className="absolute w-32 h-32 border border-cyber-pink/30 rounded-full blur-md pointer-events-none transition-opacity duration-75"
-                  style={{ top: mousePos.y - 64, left: mousePos.x - 64 }}
-                ></div>
-                <div 
-                   className="absolute pointer-events-none text-cyber-pink/50"
-                   style={{ top: mousePos.y + 10, left: mousePos.x + 10 }}
-                >
-                   <MousePointer2 size={12} fill="currentColor" />
-                </div>
-             </>
-           )
-        };
-      default:
-        return {
-           icon: <Cpu size={32} className="text-white" />,
-           borderColor: 'hover:border-white',
-           glowColor: '',
-           bgPattern: '',
-           bgOpacity: 'opacity-30',
-           accent: 'bg-white',
-           extra: null
-        };
+      case 'automation': return { icon: <Bot size={32} className="text-cyber-magenta" />, bg: 'bg-neural-dots-magenta', accent: 'bg-cyber-magenta' };
+      case 'po': return { icon: <KanbanSquare size={32} className="text-cyber-yellow" />, bg: 'bg-circuit', accent: 'bg-cyber-yellow' };
+      case 'pm': return { icon: <Compass size={32} className="text-cyber-orange" />, bg: 'bg-hex', accent: 'bg-cyber-orange' };
+      case 'delivery': return { icon: <Rocket size={32} className="text-cyber-blue" />, bg: 'bg-speed', accent: 'bg-cyber-blue' };
+      case 'ux': return { icon: <PenTool size={32} className="text-cyber-pink" />, bg: 'bg-isometric', accent: 'bg-cyber-pink' };
+      default: return { icon: <Cpu size={32} className="text-white" />, bg: '', accent: 'bg-white' };
     }
   };
 
@@ -1497,40 +1288,21 @@ const ServiceCard: React.FC<{ title: string; desc: string; items: string[]; icon
       ref={cardRef}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      onMouseMove={handleMouseMove}
-      className={`group/service relative p-8 h-full rounded-sm border border-white/5 bg-cyber-black overflow-hidden transition-all duration-300 ${visuals.borderColor} ${visuals.glowColor}`}
+      className={`group/service relative p-8 h-full rounded-sm border border-white/5 bg-cyber-black overflow-hidden transition-all duration-300 hover:border-white/20`}
     >
-      {/* Background Pattern - Variable Opacity */}
-      <div className={`absolute inset-0 ${visuals.bgPattern} pointer-events-none transition-opacity duration-500 ${hovered ? 'opacity-60' : visuals.bgOpacity}`}></div>
-      
-      {/* Dynamic Extras */}
-      {visuals.extra}
-
-      {/* Header */}
-      <div className="relative z-10 flex items-start justify-between mb-6">
-         <div className="p-3 bg-white/5 rounded-sm border border-white/10 backdrop-blur-sm group-hover/service:bg-black/40 transition-colors">
+      <div className={`absolute inset-0 ${visuals.bg} pointer-events-none opacity-20 transition-opacity duration-500 ${hovered ? 'opacity-60' : 'opacity-20'}`}></div>
+      <div className="relative z-10 mb-6">
+         <div className="p-3 bg-white/5 rounded-sm border border-white/10 w-fit">
             {visuals.icon}
          </div>
-         {/* ID Number decoration */}
-         <div className="text-xs font-mono text-gray-400 group-hover/service:text-white transition-colors">
-            ID_0{['automation','po','pm','delivery','ux'].indexOf(iconId) + 1}
-         </div>
       </div>
-
       <div className="relative z-10">
-        <h3 className="text-xl font-bold text-white mb-3 min-h-[56px] flex items-center">
-          {/* Use override title for typewriter effect, else normal */}
-          {visuals.titleOverride || title}
-        </h3>
-        
-        <p className="text-sm text-gray-200 italic mb-6 leading-relaxed font-mono border-l-2 border-gray-800 pl-3 group-hover/service:border-white/20 transition-colors">
-          "{desc}"
-        </p>
-
+        <h3 className="text-xl font-bold text-white mb-3 min-h-[56px] flex items-center">{title}</h3>
+        <p className="text-sm text-gray-200 italic mb-6 leading-relaxed font-mono border-l-2 border-gray-800 pl-3">"{desc}"</p>
         <ul className="space-y-3">
           {items.map((item, i) => (
-            <li key={i} className="text-sm text-gray-300 flex items-start gap-3 group-hover/service:text-gray-200 transition-colors">
-              <span className={`w-1.5 h-1.5 ${visuals.accent} rounded-full mt-1.5 shrink-0 opacity-40 group-hover/service:opacity-100 group-hover/service:shadow-[0_0_5px_currentColor] transition-all`}></span>
+            <li key={i} className="text-sm text-gray-300 flex items-start gap-3">
+              <span className={`w-1.5 h-1.5 ${visuals.accent} rounded-full mt-1.5 shrink-0`}></span>
               {item}
             </li>
           ))}
@@ -1540,63 +1312,36 @@ const ServiceCard: React.FC<{ title: string; desc: string; items: string[]; icon
   );
 };
 
-// Visual Badge Component for Education/Certs
 const InstitutionBadge: React.FC<{ name: string, type?: string, domain?: string }> = ({ name, type = "school", domain }) => {
   const [imgError, setImgError] = useState(false);
-  
-  // Generate initials (fallback)
   let initials = name.substring(0, 2).toUpperCase();
-  
-  // Custom overrides for better visuals on fallback
   if (name.includes("Grenoble")) initials = "GEM";
   if (name.includes("HEC")) initials = "HEC";
-  if (name.includes("Supdeweb")) initials = "SDW";
-  if (name.includes("No-Code")) initials = "NCS";
-  if (name.includes("IBM")) initials = "IBM";
-  if (name.includes("Scrum")) initials = "PSPO";
-  if (name.includes("Salesforce")) initials = "SFC";
-  if (name.includes("La Française")) initials = "FDJ";
 
-  // Icon fallback logic
-  const Icon = type === 'cert' ? Award : School;
-  
   return (
     <div className="w-16 h-16 shrink-0 border border-gray-700 bg-white flex items-center justify-center relative group-hover:border-cyber-lime transition-colors duration-300 cyber-glitch-box overflow-hidden rounded-sm">
-       {/* Decorative corner */}
-       <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-cyber-lime/50 opacity-50 z-20"></div>
-       
        {domain && !imgError ? (
          <img 
            src={`https://cdn.brandfetch.io/${domain}?c=${BRANDFETCH_API_KEY}`} 
            alt={name}
-           className="w-12 h-12 object-contain relative z-10 transition-all duration-300 opacity-100 group-hover:scale-110"
+           className="w-12 h-12 object-contain relative z-10"
            onError={() => setImgError(true)}
          />
        ) : (
-         /* Text/Icon Fallback */
-         <div className="flex flex-col items-center gap-1 z-10 bg-cyber-dark w-full h-full justify-center">
-           <span className="font-mono font-bold text-lg tracking-wider text-gray-200 group-hover:text-cyber-lime transition-colors">
-             {initials}
-           </span>
+         <div className="flex flex-col items-center z-10 bg-cyber-dark w-full h-full justify-center">
+           <span className="font-mono font-bold text-lg text-gray-200">{initials}</span>
          </div>
        )}
-       
-       {/* Background glow on hover */}
-       <div className="absolute inset-0 bg-cyber-lime/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0"></div>
     </div>
   );
 };
 
-// Expandable Education Item
 const ExpandableEduItem: React.FC<{ item: any, type?: string }> = ({ item, type = "school" }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className={`group/${type} border-b border-gray-800 last:border-0 pb-6 mb-6 last:mb-0`}>
-       <div 
-         className="flex gap-4 cursor-pointer" 
-         onClick={() => setIsOpen(!isOpen)}
-       >
+       <div className="flex gap-4 cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
          <InstitutionBadge name={type === "school" ? item.school : item.issuer} type={type} domain={item.domain} />
          <div className="flex-1">
            <div className="flex justify-between items-start">
@@ -1605,27 +1350,16 @@ const ExpandableEduItem: React.FC<{ item: any, type?: string }> = ({ item, type 
              </div>
              {isOpen ? <ChevronUp size={16} className="text-cyber-lime" /> : <ChevronDown size={16} className="text-gray-400" />}
            </div>
-           
            <div className="text-gray-200 font-mono text-sm mb-2">
              {type === "school" ? item.school : item.issuer} | {item.year}
            </div>
-           
-           {!isOpen && <div className="text-gray-300 text-sm line-clamp-1">{type === "school" ? item.desc : "Click to see details"}</div>}
          </div>
        </div>
-       
-       <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100 mt-4' : 'max-h-0 opacity-0 mt-0'}`}>
+       <div className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-[600px] opacity-100 mt-4' : 'max-h-0 opacity-0 mt-0'}`}>
           <div className="pl-20 pr-4">
-             {/* Description */}
-             <p className="text-gray-200 text-sm mb-3 italic border-l-2 border-gray-700 pl-3">
-               {item.desc}
-             </p>
-             
-             {/* Competencies */}
-             <h4 className="text-xs font-mono text-cyber-lime uppercase tracking-widest mb-2 flex items-center gap-2 mt-4">
-               <CheckCircle size={12} /> Key Competencies
-             </h4>
-             <ul className="grid grid-cols-1 gap-y-2">
+             <p className="text-gray-200 text-sm mb-3 italic border-l-2 border-gray-700 pl-3">{item.desc}</p>
+             <div className="text-[10px] font-bold font-mono text-cyber-lime uppercase tracking-widest mb-2">KEY COMPETENCIES</div>
+             <ul className="grid grid-cols-1 md:grid-cols-2 gap-y-2 mt-2">
                {item.details.map((detail: string, i: number) => (
                  <li key={i} className="text-sm text-gray-300 flex items-start gap-2">
                    <span className="text-cyber-lime/50 mt-1.5 text-[8px]">▶</span> {detail}
@@ -1638,225 +1372,129 @@ const ExpandableEduItem: React.FC<{ item: any, type?: string }> = ({ item, type 
   );
 };
 
-// Redesigned Case Study Card
 const CaseStudyCard: React.FC<{ project: any, labels: any }> = ({ project, labels }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
     <div className={`group/project relative border border-white/5 hover:border-cyber-lime/50 bg-white/[0.02] transition-all duration-300 cyber-glitch-box flex flex-col ${isExpanded ? 'bg-white/[0.04]' : ''}`}>
-      
-      {/* Header Section (Always Visible) */}
       <div className="p-8 pb-4">
-         {/* Badges Container */}
          <div className="flex flex-wrap gap-2 mb-4">
-            {/* Type Badge */}
-            <span className="px-3 py-1 bg-white/5 text-xs font-mono text-gray-300 uppercase tracking-wider border border-white/10 group-hover/project:bg-cyber-lime/10 group-hover/project:text-cyber-lime transition-colors rounded-sm">
+            <span className="px-3 py-1 bg-white/5 text-xs font-mono text-gray-300 uppercase border border-white/10 rounded-sm">
               {project.type}
             </span>
-            {/* Client Badge - Cyberpunk Style */}
-            <span className="px-3 py-1 bg-cyber-lime/5 text-xs font-mono text-cyber-lime/80 tracking-wider border border-cyber-lime/20 rounded-sm flex items-center gap-2">
-               <Building2 size={12} /> 
-               <span className="font-bold">{labels.client_label}:</span> 
-               <span className="uppercase">{project.client}</span>
+            <span className="px-3 py-1 bg-cyber-lime/5 text-xs font-mono text-cyber-lime/80 border border-cyber-lime/20 rounded-sm flex items-center gap-2">
+               <Building2 size={12} /> <span className="font-bold">{labels.client_label}:</span> <span className="uppercase">{project.client}</span>
             </span>
-            {isExpanded && <span className="text-cyber-lime text-xs font-mono animate-pulse ml-auto self-center">● ACTIVE</span>}
          </div>
-
-         <h3 className="text-4xl font-bold text-white group-hover/project:text-cyber-lime transition-colors mb-2">
-           {project.name}
-         </h3>
+         <h3 className="text-4xl font-bold text-white group-hover/project:text-cyber-lime transition-colors mb-2">{project.name}</h3>
          <span className="text-sm font-mono text-gray-400 block mb-4 border-b border-gray-800 pb-4">{project.role}</span>
-
-         {/* Teaser Summary (Persistent) */}
-         <p className="text-lg text-gray-200 leading-relaxed mb-6">
-           {project.summary}
-         </p>
-         
-         <button 
-           onClick={() => setIsExpanded(!isExpanded)}
-           className="flex items-center gap-2 text-sm font-mono text-cyber-lime uppercase tracking-widest hover:text-white transition-colors group/btn"
-         >
+         <p className="text-lg text-gray-200 leading-relaxed mb-6">{project.summary}</p>
+         <button onClick={() => setIsExpanded(!isExpanded)} className="flex items-center gap-2 text-sm font-mono text-cyber-lime uppercase tracking-widest hover:text-white transition-colors">
            {isExpanded ? 'Close Mission File' : 'Explore Mission'}
            {isExpanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
          </button>
       </div>
-
-      {/* Expanded Details Section */}
       <div className={`overflow-hidden transition-all duration-500 ease-in-out border-t border-white/5 bg-black/20 ${isExpanded ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'}`}>
         <div className="p-8 pt-6 space-y-8">
-           
-           {/* CHALLENGE */}
            <div className="relative pl-6 border-l-2 border-red-500/50">
-             <h4 className="text-xs font-mono text-red-400 uppercase tracking-widest mb-3 flex items-center gap-2">
-               <AlertTriangle size={14} /> {labels.challenge}
-             </h4>
-             <p className="text-gray-200 text-sm leading-relaxed">
-               {project.challenge}
-             </p>
+             <h4 className="text-xs font-mono text-red-400 uppercase tracking-widest mb-3 flex items-center gap-2"><AlertTriangle size={14} /> {labels.challenge}</h4>
+             <p className="text-gray-200 text-sm">{project.challenge}</p>
            </div>
-
-           {/* SOLUTION */}
            <div className="relative pl-6 border-l-2 border-blue-500/50">
-             <h4 className="text-xs font-mono text-blue-400 uppercase tracking-widest mb-3 flex items-center gap-2">
-               <Lightbulb size={14} /> {labels.solution}
-             </h4>
-             <p className="text-gray-200 text-sm leading-relaxed">
-               {project.solution}
-             </p>
+             <h4 className="text-xs font-mono text-blue-400 uppercase tracking-widest mb-3 flex items-center gap-2"><Lightbulb size={14} /> {labels.solution}</h4>
+             <p className="text-gray-200 text-sm">{project.solution}</p>
            </div>
-
-           {/* IMPACTS */}
            <div className="relative pl-6 border-l-2 border-cyber-lime/50">
-             <h4 className="text-xs font-mono text-cyber-lime uppercase tracking-widest mb-3 flex items-center gap-2">
-               <TrendingUp size={14} /> {labels.impact}
-             </h4>
+             <h4 className="text-xs font-mono text-cyber-lime uppercase tracking-widest mb-3 flex items-center gap-2"><TrendingUp size={14} /> {labels.impact}</h4>
              <ul className="grid sm:grid-cols-2 gap-x-4 gap-y-2">
                {project.impact.map((item: string, i: number) => (
                  <li key={i} className="text-sm text-gray-200 flex items-start gap-3">
-                   <span className="w-1.5 h-1.5 bg-cyber-lime rounded-full mt-1.5 shrink-0 shadow-[0_0_8px_#a3e635]"></span>
-                   {item}
+                   <span className="w-1.5 h-1.5 bg-cyber-lime rounded-full mt-1.5 shrink-0 shadow-[0_0_8px_#a3e635]"></span> {item}
                  </li>
                ))}
              </ul>
            </div>
-
-           {/* Tech Stack */}
-           <div className="pt-6 border-t border-white/5 mt-4">
-              <div className="flex flex-wrap gap-2">
-                {project.tags.map((tag: string) => (
-                  <span key={tag} className="text-xs font-mono text-gray-400 bg-black border border-gray-800 px-2 py-1">
-                    #{tag}
-                  </span>
-                ))}
-              </div>
-           </div>
-
+           {project.tags && (
+             <div className="flex flex-wrap gap-2 pt-4 border-t border-white/5 mt-4">
+               {project.tags.map((tag: string, i: number) => (
+                 <span key={i} className="text-xs font-mono text-gray-500">#{tag}</span>
+               ))}
+             </div>
+           )}
         </div>
       </div>
     </div>
   );
 };
 
-
-// --- Static Cyberpunk Profile Image (Cleaned Up) ---
 const CyberpunkProfileImage = () => {
   return (
     <div className="relative w-72 h-72 md:w-96 md:h-96 lg:w-[480px] lg:h-[480px] group">
-
-        {/* Decorative background grid */}
-        <div className="absolute inset-0 bg-cyber-lime/5 rounded-2xl transform rotate-3 cyber-glitch-box transition-transform duration-500 group-hover:rotate-6"></div>
-        <div className="absolute inset-0 border border-white/5 rounded-2xl transform -rotate-3 cyber-glitch-box transition-transform duration-500 group-hover:-rotate-6"></div>
-
-        {/* Container */}
+        <div className="absolute inset-0 bg-cyber-lime/5 rounded-2xl transform rotate-3 cyber-glitch-box"></div>
         <div className="w-full h-full relative rounded-2xl overflow-hidden border border-cyber-lime/30 bg-cyber-dark z-10 transition-colors duration-300 group-hover:border-cyber-lime">
-          {/* Corner Accents */}
-          <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-cyber-lime z-20 cyber-glitch-box"></div>
-          <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-cyber-lime z-20 cyber-glitch-box"></div>
-          
-          <img 
-              src={PROFILE_PIC_URL}
-              alt="Ismael Filho" 
-              className="w-full h-full object-cover object-top filter grayscale contrast-110 group-hover:grayscale-0 transition-all duration-500 relative z-10"
-          />
-
-          {/* Holographic Scanline */}
+          <img src={PROFILE_PIC_URL} alt="Ismael Filho" className="w-full h-full object-cover object-top filter grayscale contrast-110 group-hover:grayscale-0 transition-all duration-500 relative z-10" />
           <div className="profile-scanline"></div>
-          
-          {/* CRT Noise Overlay */}
-          <div className="absolute inset-0 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] z-20 bg-[length:100%_2px,3px_100%] pointer-events-none opacity-40"></div>
         </div>
-
-        {/* Floating badge */}
-        <div className="absolute -bottom-6 -left-6 bg-cyber-black border border-cyber-lime/30 p-4 z-30 shadow-[0_0_20px_rgba(0,0,0,0.8)] flex items-center gap-3 cyber-glitch-box">
-            <div className="bg-cyber-lime/10 p-2 rounded-sm">
-              <Layers className="text-cyber-lime" size={24} />
-            </div>
+        <div className="absolute -bottom-6 -left-6 bg-cyber-black border border-cyber-lime/30 p-4 z-30 flex items-center gap-3 cyber-glitch-box">
+            <div className="bg-cyber-lime/10 p-2 rounded-sm"><Layers className="text-cyber-lime" size={24} /></div>
             <div>
-              <div className="text-cyber-lime font-mono text-xs uppercase tracking-wider">Experience</div>
-              <div className="text-2xl font-bold text-white leading-none">6+ Years</div>
+              <div className="text-cyber-lime font-mono text-xs uppercase">Experience</div>
+              <div className="text-2xl font-bold text-white">6+ Years</div>
             </div>
         </div>
     </div>
   );
 };
 
-// --- CYBERPUNK PRELOADER ---
 const CyberPreloader = ({ onComplete }: { onComplete: () => void }) => {
   const [progress, setProgress] = useState(0);
-  const [logIndex, setLogIndex] = useState(0);
-  const [isExiting, setIsExiting] = useState(false);
+  const [statusIndex, setStatusIndex] = useState(0);
 
-  const logs = [
-    "INITIALIZING KERNEL...",
-    "DECRYPTING SECURE ASSETS...",
-    "ESTABLISHING NEURAL LINK...",
-    "LOADING INTERFACE MODULES...",
-    "SYSTEM INTEGRITY CHECK: PASS",
-    "ACCESS GRANTED."
+  const statusMessages = [
+    "INITIALIZING NEURAL LINK...",
+    "LOADING CORE MODULES...",
+    "SYNCING DATA STREAMS...",
+    "OPTIMIZING INTERFACE...",
+    "FINALIZING CONNECTION..."
   ];
 
   useEffect(() => {
-    const logInterval = setInterval(() => {
-      setLogIndex(prev => (prev + 1) % logs.length);
-    }, 450);
-
-    return () => clearInterval(logInterval);
-  }, []);
-
-  useEffect(() => {
     let timeoutId: ReturnType<typeof setTimeout>;
-
     const advanceProgress = () => {
       setProgress(prev => {
         if (prev >= 100) return 100;
-        
-        const remaining = 100 - prev;
-        const jump = Math.min(remaining, Math.floor(Math.random() * 15) + 1);
+        const jump = Math.min(100 - prev, Math.floor(Math.random() * 15) + 1);
         const next = prev + jump;
+        
+        // Update status message based on progress
+        const newIndex = Math.min(
+          statusMessages.length - 1,
+          Math.floor((next / 100) * statusMessages.length)
+        );
+        setStatusIndex(newIndex);
 
         if (next >= 100) {
-            setTimeout(() => {
-                setIsExiting(true);
-                setTimeout(onComplete, 350); 
-            }, 500);
+            setTimeout(onComplete, 260);
             return 100;
         }
-
-        timeoutId = setTimeout(advanceProgress, 500);
+        timeoutId = setTimeout(advanceProgress, 260);
         return next;
       });
     };
-
-    timeoutId = setTimeout(advanceProgress, 500);
-
+    timeoutId = setTimeout(advanceProgress, 260);
     return () => clearTimeout(timeoutId);
   }, [onComplete]);
 
   return (
-    <div className={`fixed inset-0 z-[100] bg-cyber-black flex flex-col items-center justify-center font-mono overflow-hidden ${isExiting ? 'animate-flash-shock' : ''}`}>
-      <div className="noise-bg opacity-20"></div>
-      <div className="scanlines opacity-10"></div>
-      
+    <div className="fixed inset-0 z-[100] bg-cyber-black flex flex-col items-center justify-center font-mono">
       <div className="relative z-10 flex flex-col items-center w-80">
-         <h1 className="text-4xl font-bold text-white mb-2 tracking-widest animate-glitch-flicker">
-           LOADING...
-         </h1>
-         
-         <div className="h-6 text-cyber-lime text-xs mb-8 w-full text-center">
-            {logs[logIndex]}
+         <h1 className="text-4xl font-bold text-white mb-2 tracking-widest animate-glitch-flicker">LOADING...</h1>
+         <div className="w-full h-1 bg-gray-800 rounded-full overflow-hidden mt-8">
+            <div className="h-full bg-cyber-lime shadow-[0_0_10px_#a3e635] transition-all duration-200" style={{ width: `${progress}%` }}></div>
          </div>
-
-         <div className="w-full h-1 bg-gray-800 rounded-full overflow-hidden">
-            <div 
-              className="h-full bg-cyber-lime shadow-[0_0_10px_#a3e635] transition-all duration-200 ease-out"
-              style={{ width: `${progress}%` }}
-            ></div>
-         </div>
-         
-         <div className="mt-2 w-full flex justify-between text-xs text-gray-500">
-            <span>SYSTEM_BOOT_V2.4</span>
-            <span>{progress}%</span>
-         </div>
+         <p className="mt-4 text-[10px] text-cyber-lime/70 tracking-[0.2em] uppercase animate-pulse">
+           {statusMessages[statusIndex]}
+         </p>
       </div>
     </div>
   );
@@ -1872,148 +1510,74 @@ const App = () => {
     document.title = `Ismael Filho | ${t.hero.role}`;
   }, [lang]);
 
-  if (isLoading) {
-    return <CyberPreloader onComplete={() => setIsLoading(false)} />;
-  }
+  if (isLoading) return <CyberPreloader onComplete={() => setIsLoading(false)} />;
 
   return (
     <div className="min-h-screen relative font-sans text-cyber-text bg-grid pb-20 animate-in fade-in duration-700">
       <LanguageSwitcher current={lang} setLang={setLang} />
 
       {/* --- HERO SECTION --- */}
-      <section className="relative z-10 min-h-screen flex flex-col lg:flex-row items-center justify-center px-6 md:px-12 lg:px-12 xl:px-24 pt-32 lg:pt-0 gap-12 lg:gap-20 group hover-trigger">
-    
+      <section className="relative z-10 min-h-screen flex flex-col lg:flex-row items-center justify-center px-6 md:px-12 lg:px-12 xl:px-24 pt-32 lg:pt-0 gap-12 lg:gap-20">
         <div className="flex-1 order-2 lg:order-1 flex flex-col items-center lg:items-start text-center lg:text-left">
-            
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-none mb-6 text-white tracking-tight flex flex-col items-center lg:items-start">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 text-white tracking-tight flex flex-col">
               <GlitchText text="ISMAEL" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-400">
-                <GlitchText text="FILHO" className="text-white" />
-              </span>
+              <GlitchText text="FILHO" className="text-white" />
             </h1>
-            
-            <div className="flex flex-col md:flex-row items-center gap-3 md:gap-4 mb-8">
-              <span className="text-lg md:text-xl font-mono text-cyber-lime font-bold tracking-widest uppercase border border-cyber-lime px-4 py-1.5 rounded-sm shadow-[0_0_15px_rgba(163,230,53,0.2)] cyber-glitch-box">
-                {t.hero.role}
-              </span>
-              <span className="hidden md:inline-block h-[1px] w-12 bg-white/50"></span>
-              <GlitchText text={t.hero.subrole} className="text-white font-mono text-sm md:text-base tracking-wide" />
+            <div className="flex flex-col md:flex-row items-center gap-4 mb-8">
+              <span className="text-lg font-mono text-cyber-lime font-bold border border-cyber-lime px-4 py-1.5 rounded-sm">{t.hero.role}</span>
+              <GlitchText text={t.hero.subrole} className="text-white font-mono text-sm" />
             </div>
-
-             <div className="flex items-center gap-4 mb-8 text-sm font-mono text-gray-400">
-              <div className="flex items-center gap-2">
-                 <Globe size={16} className="text-cyber-lime" />
-                 <span className="tracking-widest">{t.hero.trilingual}</span>
-              </div>
-              <div className="h-4 w-[1px] bg-gray-700"></div>
-              <div className="flex gap-3">
-                <span className="text-white hover:text-cyber-lime transition-colors cursor-default" title="English">EN</span>
-                <span className="text-gray-600">/</span>
-                <span className="text-white hover:text-cyber-lime transition-colors cursor-default" title="French">FR</span>
-                <span className="text-gray-600">/</span>
-                <span className="text-white hover:text-cyber-lime transition-colors cursor-default" title="Portuguese">PT-BR</span>
-              </div>
-            </div>
-
-            <p className="max-w-2xl text-lg md:text-xl text-white leading-relaxed mb-10 lg:pr-10 opacity-100">
-              {t.hero.description}
-            </p>
-
+            <p className="max-w-2xl text-lg md:text-xl text-white leading-relaxed mb-10">{t.hero.description}</p>
             <div className="flex flex-wrap justify-center lg:justify-start gap-4 font-mono w-full">
-              <a href="#contact" className="cyber-glitch-box group/btn relative px-8 py-3 bg-cyber-lime text-cyber-black font-bold uppercase tracking-wider hover:bg-white transition-all duration-300 flex-1 sm:flex-none text-center min-w-[160px]">
-                {t.hero.cta_contact}
-                <div className="absolute inset-0 border border-cyber-lime translate-x-1 translate-y-1 -z-10 group-hover/btn:translate-x-1.5 group-hover/btn:translate-y-1.5 transition-transform duration-300"></div>
-              </a>
-              <a href={CV_FOLDER_URL} download="CV_Ismael_Filho.pdf" target="_blank" rel="noopener noreferrer" className="cyber-glitch-box group/btn flex items-center justify-center gap-2 px-8 py-3 border border-gray-500 text-white hover:border-cyber-lime hover:text-cyber-lime hover:bg-cyber-lime/5 transition-all duration-300 uppercase tracking-wider flex-1 sm:flex-none min-w-[160px] relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-2 h-2 border-t border-r border-cyber-lime opacity-0 group-hover/btn:opacity-100 transition-opacity"></div>
-                <div className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-cyber-lime opacity-0 group-hover/btn:opacity-100 transition-opacity"></div>
-                <Download size={18} />
-                {t.hero.cta_cv}
-              </a>
+              <a href="#contact" className="cyber-glitch-box px-8 py-3 bg-cyber-lime text-cyber-black font-bold uppercase hover:bg-white transition-all duration-300">{t.hero.cta_contact}</a>
+              <a href={CV_FOLDER_URL} download target="_blank" rel="noreferrer" className="cyber-glitch-box px-8 py-3 border border-gray-500 text-white hover:text-cyber-lime transition-all duration-300 uppercase flex items-center gap-2"><Download size={18} /> {t.hero.cta_cv}</a>
             </div>
         </div>
-
         <div className="flex-1 order-1 lg:order-2 flex justify-center lg:justify-end relative">
             <CyberpunkProfileImage />
         </div>
       </section>
 
-      {/* --- ABOUT SECTION --- */}
-      <section id="about" className="relative z-10 px-6 md:px-12 lg:px-12 xl:px-24 py-24 border-t border-white/5 group hover-trigger">
+      {/* --- CONTENT SECTIONS --- */}
+      <section id="about" className="px-6 md:px-12 xl:px-24 py-24 border-t border-white/5">
         <div className="grid md:grid-cols-5 gap-12">
-          <div className="md:col-span-1 font-mono text-gray-400 text-sm sticky top-24 h-fit">
-            <GlitchText text={t.nav.about} />
-          </div>
+          <div className="md:col-span-1 font-mono text-gray-400 text-sm"><GlitchText text={t.nav.about} /></div>
           <div className="md:col-span-3">
             <SectionHeading>{t.about.title}</SectionHeading>
             <div className="space-y-6 text-lg text-gray-200 leading-relaxed max-w-3xl">
-              <p>{t.about.p1}</p>
-              <p>{t.about.p2}</p>
+              <p>{t.about.p1}</p><p>{t.about.p2}</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* --- WHAT DO I DO SECTION --- */}
-      <section id="services" className="relative z-10 px-6 md:px-12 lg:px-12 xl:px-24 py-24 border-t border-white/5 bg-cyber-dark/30 group hover-trigger">
-         <div className="grid md:grid-cols-5 gap-12">
-           <div className="md:col-span-1 font-mono text-gray-400 text-sm sticky top-24 h-fit">
-             <GlitchText text={t.nav.services} />
-           </div>
-           <div className="md:col-span-3">
-             <SectionHeading>{t.services.title}</SectionHeading>
-             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-               {t.services.items.map((item, idx) => (
-                 <div key={item.id} className={idx >= 3 ? "md:col-span-1" : ""}>
-                    <ServiceCard title={item.title} desc={item.desc} items={item.points} iconId={item.id} />
-                 </div>
-               ))}
-             </div>
-           </div>
-         </div>
+      <section id="services" className="px-6 md:px-12 xl:px-24 py-24 border-t border-white/5 bg-cyber-dark/30">
+        <div className="grid md:grid-cols-5 gap-12">
+          <div className="md:col-span-1 font-mono text-gray-400 text-sm"><GlitchText text={t.nav.services} /></div>
+          <div className="md:col-span-3">
+            <SectionHeading>{t.services.title}</SectionHeading>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {t.services.items.map(item => <ServiceCard key={item.id} title={item.title} desc={item.desc} items={item.points} iconId={item.id} />)}
+            </div>
+          </div>
+        </div>
       </section>
 
-      {/* --- EXPERIENCE SECTION --- */}
-      <section id="experience" className="relative z-10 px-6 md:px-12 lg:px-12 xl:px-24 py-24 border-t border-white/5 group hover-trigger">
+      <section id="experience" className="px-6 md:px-12 xl:px-24 py-24 border-t border-white/5">
         <div className="grid md:grid-cols-5 gap-12">
-          <div className="md:col-span-1 font-mono text-gray-400 text-sm sticky top-24 h-fit">
-            <GlitchText text={t.nav.experience} />
-          </div>
+          <div className="md:col-span-1 font-mono text-gray-400 text-sm"><GlitchText text={t.nav.experience} /></div>
           <div className="md:col-span-3">
             <SectionHeading>{t.experience.title}</SectionHeading>
             <div className="relative border-l border-gray-800 ml-3 space-y-12">
               {t.experience.jobs.map((job, idx) => (
                 <div key={idx} className="relative pl-8 group/job">
-                  <div className="absolute -left-[5px] top-2 w-2.5 h-2.5 bg-gray-800 rounded-full border border-gray-600 group-hover/job:bg-cyber-lime group-hover/job:border-cyber-lime transition-colors duration-300"></div>
-                  
-                  <div className="mb-1 font-mono text-xs text-cyber-lime mb-2 tracking-wide">
-                    {job.period}
-                  </div>
-                  <h3 className="text-2xl font-bold text-white group-hover/job:text-cyber-lime transition-colors duration-300">
-                    <GlitchText text={job.role} />
-                  </h3>
-                  <div className="text-lg text-gray-200 mb-4 font-medium">
-                    {job.company} — <span className="text-sm font-normal text-gray-400">{job.location}</span>
-                  </div>
-                  
-                  <ul className="space-y-2 mb-6 text-gray-300">
-                    {job.description.map((desc, i) => (
-                      <li key={i} className="leading-relaxed flex items-start gap-2">
-                        <span className="mt-2 w-1 h-1 bg-gray-600 rounded-full shrink-0"></span>
-                        {desc}
-                      </li>
-                    ))}
+                  <div className="absolute -left-[5px] top-2 w-2.5 h-2.5 bg-gray-800 rounded-full border border-gray-600 group-hover/job:bg-cyber-lime transition-colors"></div>
+                  <div className="mb-1 font-mono text-xs text-cyber-lime mb-2">{job.period}</div>
+                  <h3 className="text-2xl font-bold text-white group-hover/job:text-cyber-lime transition-colors"><GlitchText text={job.role} /></h3>
+                  <div className="text-lg text-gray-200 mb-4">{job.company} — <span className="text-sm font-normal text-gray-400">{job.location}</span></div>
+                  <ul className="space-y-2 text-gray-300">
+                    {job.description.map((desc, i) => <li key={i} className="flex items-start gap-2"><span className="mt-2 w-1 h-1 bg-gray-600 rounded-full shrink-0"></span>{desc}</li>)}
                   </ul>
-
-                  {job.tech && (
-                    <div className="flex flex-wrap gap-2">
-                      {job.tech.map((tag) => (
-                        <span key={tag} className="px-2 py-1 text-xs font-mono text-gray-400 border border-gray-800 rounded-sm hover:border-cyber-lime/50 transition-colors cyber-glitch-box">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  )}
                 </div>
               ))}
             </div>
@@ -2021,168 +1585,62 @@ const App = () => {
         </div>
       </section>
 
-      {/* --- CASE STUDIES --- */}
-      <section id="projects" className="relative z-10 px-6 md:px-12 lg:px-12 xl:px-24 py-24 border-t border-white/5 bg-cyber-dark/30 group hover-trigger">
+      <section id="projects" className="px-6 md:px-12 xl:px-24 py-24 border-t border-white/5 bg-cyber-dark/30">
         <div className="grid md:grid-cols-5 gap-12">
-          <div className="md:col-span-1 font-mono text-gray-400 text-sm sticky top-24 h-fit">
-            <GlitchText text={t.nav.projects} />
-          </div>
+          <div className="md:col-span-1 font-mono text-gray-400 text-sm"><GlitchText text={t.nav.projects} /></div>
           <div className="md:col-span-3">
             <SectionHeading>{t.projects.title}</SectionHeading>
-            <p className="text-gray-300 mb-12">{t.projects.intro}</p>
-            
             <div className="grid gap-6">
-              {t.projects.items.map((project, idx) => (
-                <CaseStudyCard 
-                  key={idx} 
-                  project={project} 
-                  labels={{ ...t.projects.labels, client_label: t.projects.client_label }} 
-                />
-              ))}
+              {t.projects.items.map((project, idx) => <CaseStudyCard key={idx} project={project} labels={{ ...t.projects.labels, client_label: t.projects.client_label }} />)}
             </div>
           </div>
         </div>
       </section>
 
-      {/* --- EXPERIMENTATIONS VAULT --- */}
-      <section id="experimentations" className="relative z-10 px-6 md:px-12 lg:px-12 xl:px-24 py-24 border-t border-white/5 group hover-trigger">
+      <section id="education" className="px-6 md:px-12 xl:px-24 py-24 border-t border-white/5">
         <div className="grid md:grid-cols-5 gap-12">
-          <div className="md:col-span-1 font-mono text-gray-400 text-sm sticky top-24 h-fit">
-            <GlitchText text={t.nav.experimentations} />
-          </div>
-          <div className="md:col-span-3">
-             <SectionHeading>{t.experimentations.title}</SectionHeading>
-             <ExperimentationVault t={t.experimentations} />
-          </div>
-        </div>
-      </section>
-
-      {/* --- EDUCATION & CERTIFICATIONS (EXPANDABLE) --- */}
-      <section id="education" className="relative z-10 px-6 md:px-12 lg:px-12 xl:px-24 py-24 border-t border-white/5 group hover-trigger">
-         <div className="grid md:grid-cols-5 gap-12">
-          <div className="md:col-span-1 font-mono text-gray-400 text-sm sticky top-24 h-fit">
-            <GlitchText text={t.nav.education} />
-          </div>
+          <div className="md:col-span-1 font-mono text-gray-400 text-sm"><GlitchText text={t.nav.education} /></div>
           <div className="md:col-span-3">
              <SectionHeading>{t.education.title}</SectionHeading>
-             
              <div className="grid lg:grid-cols-2 gap-12">
-                <div>
-                   <h3 className="flex items-center gap-2 text-cyber-lime font-mono text-sm uppercase tracking-widest mb-8">
-                      <GraduationCap size={16} /> Academic
+                <div className="space-y-6">
+                   <h3 className="text-xs font-mono text-cyber-lime uppercase tracking-[0.2em] mb-4 flex items-center gap-2">
+                      <GraduationCap size={16} /> ACADEMIC
                    </h3>
-                   <div>
-                      {t.education.academic.map((edu, idx) => (
-                        <ExpandableEduItem key={idx} item={edu} type="school" />
-                      ))}
-                   </div>
+                   {t.education.academic.map((edu, idx) => <ExpandableEduItem key={idx} item={edu} type="school" />)}
                 </div>
-
-                <div>
-                   <h3 className="flex items-center gap-2 text-cyber-lime font-mono text-sm uppercase tracking-widest mb-8">
-                      <Award size={16} /> Certifications
+                <div className="space-y-6">
+                   <h3 className="text-xs font-mono text-cyber-magenta uppercase tracking-[0.2em] mb-4 flex items-center gap-2">
+                      <Award size={16} /> CERTIFICATIONS
                    </h3>
-                   <div>
-                      {t.education.certs.map((cert, idx) => (
-                        <ExpandableEduItem key={idx} item={cert} type="cert" />
-                      ))}
-                   </div>
+                   {t.education.certs.map((cert, idx) => <ExpandableEduItem key={idx} item={cert} type="cert" />)}
                 </div>
              </div>
           </div>
         </div>
       </section>
 
-      {/* --- SKILLS SECTION --- */}
-      <section id="skills" className="relative z-10 px-6 md:px-12 lg:px-12 xl:px-24 py-24 border-t border-white/5 bg-cyber-dark/30 group hover-trigger">
+      <section id="contact" className="px-6 md:px-12 xl:px-24 py-24 border-t border-white/5">
         <div className="grid md:grid-cols-5 gap-12">
-          <div className="md:col-span-1 font-mono text-gray-400 text-sm sticky top-24 h-fit">
-            <GlitchText text={t.nav.skills} />
-          </div>
-          <div className="md:col-span-3">
-            <SectionHeading>{t.skills.title}</SectionHeading>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-12">
-              {t.skills.categories.map((category, idx) => {
-                const Icon = category.icon;
-                return (
-                  <div key={idx} className={`cyber-glitch-box p-6 bg-white/5 border border-white/5 rounded-sm`}>
-                    <div className="flex items-center gap-3 mb-6 text-cyber-lime">
-                      <Icon size={24} />
-                      <h3 className="font-bold uppercase tracking-wider">{category.name}</h3>
-                    </div>
-                    <ul className="space-y-3">
-                      {category.items.map((item, i) => (
-                        <li key={i} className="text-gray-300 font-mono text-sm flex items-center gap-2">
-                           <div className="w-1 h-1 bg-cyber-lime rounded-full"></div>
-                           {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* --- CONTACT SECTION --- */}
-      <section id="contact" className="relative z-10 px-6 md:px-12 lg:px-12 xl:px-24 py-24 border-t border-white/5 group hover-trigger">
-        <div className="grid md:grid-cols-5 gap-12">
-          <div className="md:col-span-1 font-mono text-gray-400 text-sm sticky top-24 h-fit">
-            <GlitchText text={t.nav.contact} />
-          </div>
+          <div className="md:col-span-1 font-mono text-gray-400 text-sm"><GlitchText text={t.nav.contact} /></div>
           <div className="md:col-span-3">
             <SectionHeading>{t.contact.title}</SectionHeading>
-            <p className="text-2xl text-white mb-12 max-w-2xl leading-relaxed">
-              {t.contact.text}
-            </p>
+            <p className="text-2xl text-white mb-12 max-w-2xl">{t.contact.text}</p>
             <div className="flex flex-wrap gap-6">
-              <a href="mailto:ismaelnfilho@gmail.com" className="flex items-center gap-3 px-8 py-4 bg-cyber-lime text-cyber-black font-bold uppercase tracking-wider hover:bg-white transition-all duration-300 cyber-glitch-box rounded-sm">
-                <Mail size={20} />
-                {t.contact.cta_email}
-              </a>
-              <a href="https://linkedin.com/in/ismaelnfilho/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 px-8 py-4 border border-gray-600 text-white font-bold uppercase tracking-wider hover:border-cyber-lime hover:text-cyber-lime transition-all duration-300 cyber-glitch-box rounded-sm">
-                <Linkedin size={20} />
-                {t.contact.cta_linkedin}
-              </a>
-               <a href="tel:+33666324997" className="flex items-center gap-3 px-8 py-4 border border-gray-600 text-white font-bold uppercase tracking-wider hover:border-cyber-lime hover:text-cyber-lime transition-all duration-300 cyber-glitch-box rounded-sm">
-                <Phone size={20} />
-                {t.contact.cta_phone}
-              </a>
+              <a href="mailto:ismaelnfilho@gmail.com" className="flex items-center gap-3 px-8 py-4 bg-cyber-lime text-cyber-black font-bold uppercase cyber-glitch-box"><Mail size={20} />{t.contact.cta_email}</a>
+              <a href="https://linkedin.com/in/ismaelnfilho/" target="_blank" rel="noreferrer" className="flex items-center gap-3 px-8 py-4 border border-gray-600 text-white font-bold uppercase cyber-glitch-box"><Linkedin size={20} />{t.contact.cta_linkedin}</a>
+              <a href={`tel:${PHONE_NUMBER}`} className="flex items-center gap-3 px-8 py-4 border border-gray-600 text-white font-bold uppercase cyber-glitch-box"><Phone size={20} />{t.contact.cta_phone}</a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* --- FOOTER --- */}
-      <footer className="relative z-10 border-t border-white/10 py-12 text-center">
-         <div className="flex flex-col items-center gap-4">
-            <div className="font-mono text-gray-500 text-xs tracking-widest uppercase">
-              Ismael Filho © {new Date().getFullYear()}
-            </div>
-            <div className="flex gap-4">
-               <a href="https://github.com/ismaelnfilho" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-cyber-lime transition-colors">
-                  <Code size={16} />
-               </a>
-               <a href="https://linkedin.com/in/ismaelnfilho/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-cyber-lime transition-colors">
-                  <Linkedin size={16} />
-               </a>
-               <a href="mailto:ismaelnfilho@gmail.com" className="text-gray-500 hover:text-cyber-lime transition-colors">
-                  <Mail size={16} />
-               </a>
-            </div>
-             <div className="font-mono text-gray-600 text-[10px] mt-4">
-              SYSTEM STATUS: ONLINE | V2.4.0
-            </div>
-         </div>
+      <footer className="border-t border-white/10 py-12 text-center">
+         <div className="font-mono text-gray-500 text-xs tracking-widest uppercase">Ismael Filho © {new Date().getFullYear()}</div>
+         <div className="font-mono text-gray-600 text-[10px] mt-4 uppercase">System Status: Online | V2.4.0</div>
       </footer>
     </div>
   );
 };
 
-createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+createRoot(document.getElementById('root')!).render(<React.StrictMode><App /></React.StrictMode>);
