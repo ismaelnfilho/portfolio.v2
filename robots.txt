@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ismaelfilho.com/sitemap.xml
+Sitemap: https://www.ismaelfilho.com/sitemap.xml
