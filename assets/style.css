@@ -1270,3 +1270,29 @@ noscript { display: none; }
 
 @media (prefers-reduced-motion: reduce) { .glitch.is-live::before, .glitch.is-live::after { animation: none; opacity: 0; } }
 
+
+/* Touch devices: play the What I Do card effects when the card is on screen */
+@media (hover: none) {
+  .svc.in-view { border-color: rgba(255, 255, 255, .2); }
+  .svc.in-view .svc-pat { opacity: .6; }
+  .svc.in-view { border-color: rgba(var(--c), .15); transform: translateY(-2px); animation: svc-neon 2.4s ease-in-out infinite; }
+  .svc.in-view::after { opacity: 1; }
+  .svc.in-view::before { opacity: .5; }
+  .svc:has(.pat-circuit).in-view::before { animation: svc-fail 2.6s steps(1, end) infinite; }
+  .svc:has(.pat-hex).in-view .svc-body { filter: drop-shadow(0 0 0 transparent); }
+  .svc:has(.pat-isometric).in-view .svc-body h3 { animation: svc-rgb 2.4s steps(1, end) infinite; }
+  .svc:has(.pat-neural-magenta).in-view .svc-body h3 { animation: rgb-v 3.2s steps(1, end) infinite; }
+  .svc:has(.pat-circuit).in-view .svc-body h3 { animation: rgb-jump 2.6s steps(1, end) infinite; }
+  .svc:has(.pat-hex).in-view .svc-body h3 { animation: rgb-skew 2.8s steps(1, end) infinite; }
+  .svc:has(.pat-speed).in-view .svc-body h3 { animation: rgb-smear 1.6s steps(1, end) infinite; }
+  .svc.in-view .svc-ico {
+  border-color: rgba(var(--c), .3);
+  background: rgba(var(--c), .07);
+  box-shadow: 0 0 12px rgba(var(--c), .3), inset 0 0 8px rgba(var(--c), .18);
+}
+  .svc.in-view .svc-body h3 { text-shadow: 0 0 10px rgba(var(--c), .42); }
+  .svc.in-view .svc-list .dot { box-shadow: 0 0 6px rgba(var(--c), .7); }
+  .svc.in-view .svc-quote { border-left-color: rgba(var(--c), .4); }
+  .svc:has(.pat-hex).in-view .svc-ico svg > polygon { animation-duration: 2.5s; }
+  .svc:has(.pat-speed).in-view .svc-ico svg { animation-duration: .18s; }
+}
